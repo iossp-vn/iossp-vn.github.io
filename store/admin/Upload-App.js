@@ -147,7 +147,7 @@ const UploadApp = {
 					Versions
 				</div>
 				<div class="col-12 mt-3">
-					<div class="input-group">
+					<div class="input-group" style="height:15rem">
 						<textarea class="form-control" v-model="versions" placeholder='"key": "URL", \n"key": "URL"'></textarea>
 					</div>
 				</div>

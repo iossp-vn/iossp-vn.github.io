@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Change Swiper</title>
-
-		<script src="/js/vue.min.js"></script>
-		<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css></link>
-		<link rel=stylesheet href="/css/bootstrap.min.css"></link>
-		<meta name=viewport content='width=device-width, initial-scale=1.0, user-scalable=no'/>
-		<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
-		<script src="/js/sweet-alert-2.js"></script>
-	</head>
-	<body>
-		<template id="child-swiper">
-			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
-				<div class="input-group input-group-sm">
-					<input class="form-control" :value="data" @input="$emit('input', $event.target.value)" placeholder="Liên kết ảnh"/>
-					<div class="input-group-append bg-0">
-						<span class="input-group-text bg-0" @click="$emit('delete')">
-							<i class="fas fa-times"></i>
-						</span>
-					</div>
-				</div>
-				<img class="w-100 img-thumbnail" :src="data" v-show="showImg" @error="showImg = false" @load="showImg = true"/>
-			</div>
-		</template>
-		
-		<main class="container" hidden>
+const SwiperEditor = {
+    template: `
+		<main hidden class="container">
 			<div class="row">
 				<div class="col-12">
 <nav>
@@ -47,40 +19,34 @@
 				<button class="form-control text-left" @click="type.splice(0, 0, '')"> + Thêm tùy chọn </button>
 			</div>
 		</div>
-		<child-swiper v-for="(swipe, index) in type" :data="swipe" @delete="del(index, n)" :key="[index, n].join('-')" v-model="type[index]">
+		<child-swiper v-for="(swipe, index) in type" :data="swipe" @delete="del(index, n)" :key="[index, n].join('-')" v-model="type[index]" />
 	</div>
 </div>
 				</div>
 			</div>
 			
 		</main>
-		
-<script>
-console.warn = console.error = e => console.log(e + "")
-var firebaseConfig = {
-	apiKey: "AIzaSyBLHGwZfk0XoRAtM6WwgqtKbEpAM4z6OSw",
-	authDomain: "store-app-7e82d.firebaseapp.com",
-	databaseURL: "https://store-app-7e82d.firebaseio.com",
-	projectId: "store-app-7e82d",
-	storageBucket: "store-app-7e82d.appspot.com",
-	messagingSenderId: "465528518914",
-	appId: "1:465528518914:web:f965f61aa254a4d8ab6a1b",
-	measurementId: "G-KRD443YXML"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-var db = firebase.database()
-new Vue({
-    el: "main.container",
-    data: {
-		 tab: 0,
-		 data: []
+    `,
+    data() {
+    	return {
+		 	tab: 0,
+		 	data: []
+		}
     },
     components: {
         "child-swiper": {
-            template: "#child-swiper",
+            template: `
+			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
+				<div class="input-group input-group-sm">
+					<input class="form-control" :value="data" @input="$emit('input', $event.target.value)" placeholder="Liên kết ảnh"/>
+					<div class="input-group-append bg-0">
+						<span class="input-group-text bg-0" @click="$emit('delete')">
+							<i class="fas fa-times"></i>
+						</span>
+					</div>
+				</div>
+				<img class="w-100 img-thumbnail" :src="data" v-show="showImg" @error="showImg = false" @load="showImg = true"/>
+			</div>`,
 			 props: {
 			     data: String
 			 },
@@ -95,7 +61,7 @@ new Vue({
         db.ref("swipers/")
         .once("value", e => {
             this.data = [e.val().hot, e.val().app, e.val().game]
-			 this.$root.$el.removeAttribute("hidden")
+			 this.$el.removeAttribute("hidden")
         })
     },
     methods: {
@@ -115,13 +81,8 @@ new Vue({
             })
             
         },
-        loginG() {
-            //cay dm mất 100k
-            // mày hay lắm đời ạ
-firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider())
-        },
         save(data, index) {
-			 if (firebase.auth().currentUser == null)
+			 if (this.$root.user == null)
 			 	Swal.fire({
 			 	    title: "Lỗi",
 			 	    icon: "error",
@@ -155,21 +116,4 @@ firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider())
 			 
         }
     }
-})
-</script>
-<style> * {
-	margin: 0;
-	padding: 0;
 }
-body {
-	
-}
-
-.bg-0 {
-    background-color: #00000000 !important;
-}
-
-.nav-item.active {
-    color: var(--primary) !important;
-} </style> </body>
-</html>

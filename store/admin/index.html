@@ -1,711 +1,343 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Admin Page</title>
-		<script src="https://iossp-vn.github.io/js/my.js" async></script>
-		<script src="https://iossp-vn.github.io/js/libmy.js" async></script>
-		<script src="https://iossp-vn.github.io/js/vue.min.js" async></script>
-		<link rel=stylesheet href="https://iossp-vn.github.io/css/bootstrap.min.css"></link>
-		<meta name=viewport content='width=device-width, initial-scale=1.0, user-scalable=no' charset=utf-8 />
-		<script src="https://iossp-vn.github.io/js/simplemde.min.js" async></script>
-		<link rel=stylesheet href="https://iossp-vn.github.io/css/simplemde.min.css"></link>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js" async></script>
+		<title>Page Title</title>
+		<script src="https://iossp-vn.github.io/js/polyfill-0.1.42.min.js"></script>
+		<script src="https://iossp-vn.github.io/js/my.js"></script>
+		<script src="https://iossp-vn.github.io/js/libmy.js"></script>
+		<script src="https://iossp-vn.github.io/js/vue.development.js"></script>
+		<script src="https://iossp-vn.github.io/js/vue-router-sm.js"></script>
+		<link rel=stylesheet href="https://iossp-vn.github.io/js/all.min.js">
+		<link rel=stylesheet href="https://iossp-vn.github.io/css/bootstrap.min.css">
 
-<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-storage.js" async></script>
+		<!-- lib main -->
+		<script src="https://iossp-vn.github.io/js/simplemde.min.js"></script>
+		<link rel=stylesheet href="https://iossp-vn.github.io/css/simplemde.min.css">
+		<script src="https://iossp-vn.github.io/js/sweet-alert-2.js"></script>
+		<script src="https://d3js.org/d3.v4.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js" async></script>
+		<!-- Single Page Application -->
+		<link rel=stylesheet href="Upload-App.css">
+		<link rel=stylesheet href="Login.css">
+		<link rel=stylesheet href="Swiper-Editor.css">
+		<script src="Upload-App.js"></script>
+		<script src="Swiper-Editor.js"></script>
+		<script src="Delete-App.js"></script>
+		<script src="Home.js"></script>
+		<script src="Login.js"></script>
+		<script src="MyAccount.js"></script>
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+<!-- /firebase -->
 
-<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js" async></script>
+		<meta name=viewport content="width=device-width, initial-scale=1.0, user-scalable=no" charset="utf-8" />
 
-<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js" async></script>
+<script>gs://legacy-c17c9.appspot.com
+var firebaseConfig = {
+	apiKey: "AIzaSyAlbccCOlMsCCYWdCvyPUZr8tkQiVRIDfI",
+	authDomain: "legacy-c17c9.firebaseapp.com",
+	databaseURL: "https://legacy-c17c9-default-rtdb.firebaseio.com",
+	projectId: "legacy-c17c9",
+	storageBucket: "legacy-c17c9.appspot.com",
+	messagingSenderId: "629962687525",
+	appId: "1:629962687525:web:b3efa2687851e805592bcc",
+	measurementId: "G-61MZP1E896"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+var db = firebase.database()
+var storage = firebase.storage()
+var auth = firebase.auth()
+</script>
 	</head>
 	<body>
-		<div class="container">
-			<div class="row bg-primary text-light py-1">
-				<div class="col-12" v-if="!auth.login">
-					<img class="avatar" src="/icons/google.png"/> <span class="mx-3" @click="signInGoogle" key="Login"> Sign in Google</span>
-				</div>
-				<div class="col-12" v-else>
-					<img class="avatar" :src=auth.photoURL /> <span class="mx-3"> {{ auth.name }} </span> <button class="btn btn-sm btn-primary" @click="signOut" key="Logout">Sign Out</button>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-4">	
-					<img class="icon border" :src="iconbase" @click=inpMediaIcon>
-				</div>
-				<div class="col">
-					<input class="appea-none" style="width: 150px" v-model=name placeholder="Name app" /><br>
-					<input class="appea-none" style="width: 150px" v-model=size type="tel" placeholder="Size" />
-				</div>
-			</div>
-			
-			<!-- Information -->
-			<div class="row mt-7">
-				<div class="col-12 text-bold h6 mb-0">
-					Information
-				</div>
-				<div class="col-12">
-					<table class="table table-sm w3-7 border-0 small">
-						<tr class="border-0">
-							<td class="text-secondary border-0"> Package id </td>
-							<td class="border-0 text-bold">
 
-<input class="appea-none" v-model=package />
+<div id = "app" hidden>
 
-<button class="btn btn-sm btn-dark" @click="getInforInDB">Get</button>
-							</td>
-						</tr>
-						<tr class="border-0">
-							<td class="text-secondary border-0"> Developer </td>
-							<td class="border-0 text-bold"><input class="appea-none" v-model=infor.developer /></td>
-						</tr>
-						<tr class="border-0">
-							<td class="text-secondary border-0"> Category </td>
-							<td class="border-0 text-bold"><input class="appea-none" v-model=infor.category /></td>
-						</tr>
-						<tr class="border-0">
-							<td class="text-secondary border-0"> Compatibility </td>
-							<td class="border-0 text-bold"><input class="appea-none" v-model=infor.compatibility /></td>
-						</tr>
-						<tr class="border-0">
-							<td class="text-secondary border-0"> Languages </td>
-							<td class="border-0 text-bold"><input class="appea-none" v-model=infor.languages /></td>
-						</tr>
-					</table>
-				</div>
-			</div>
-			
-			<!-- Versions -->
-			<div class="row mt-3">
-				<div class="col-12 text-bold h6 mb-0">
-					Versions
-				</div>
-				<div class="col-12 mt-3">
-					<div class="input-group" style="height: 100px">
-						<textarea class="form-control" v-model="versions" placeholder='"key": "URL", \n"key": "URL"'></textarea>
-					</div>
-				</div>
-			</div>
-			
-			<!-- Typeof -->
-			<div class="row mt-3">
-				<div class="col-12 text-bold h6 mb-0">
-					Type
-				</div>
-				<div class="col-12 mt-3">
-					<div class="input-group input-group-sm">
-						<select class="form-control custom-select" v-model="type"></textarea>
-							<option value="app" selected> App </option>
-							<option value="game"> Game </option>
-						</select>
-					</div>
-				</div>
-			</div>
-			
-			<!-- Screenshoot -->
-			<div class="row mt-3">
-				<div class="col-12 text-bold h6 mb-0">
-					Screenshoot
-				</div>
-				<div class="col-12 mt-3">
-					<div class="scroll">
-						<media class="img-fluid screenshoot ml-3 border" v-for="(file, key) in screenshoot" :file=file :key="key" 
-@change-file="changeFile(key)"
-@remove-file="removeFile(key)"></media>
+	<div class="menu-parent__app">
+		<transition name="fade" v-if="isLg === false">
+			<div class="tmp-menu__app fixed-top w-100 h-100"
+	v-show="state.menu__main"
+	@click="state.menu__main = false"></div>
+		</transition>
 
-						<div class="ml-3"><img class="img-fluid screenshoot border" @click="inpMedia"/></div>
+		<transition-group name="slide">
+			<div class="menu__app bg-light border size-12 pt-3" 
+	@click.stop
+	key="menu__app"
+	v-show="isLg || state.menu__main">
+				<div class="row">
+					<div class="col-12">
+						<ul class="list-group">
+							<li is="router-link" class="list-group-item bg-0 border-0 rounded-0"
+	v-for="(name, link) in listItemMenu"
+	:class="{_active: currentRoute == link}"
+	:to="link" tag="li"
+	:key="Math.random()"> {{ name }} </li>
+						</ul>
 					</div>
 				</div>
 			</div>
-			
-			<!-- Description -->
-			<div class="row mt-3">
-				<div class="col-12 text-bold h6 mb-0 icon-more">
-					Description
-				</div>
-				<div class="col-12 my-3 small text-secondary">
-					<textarea ref=description></textarea>
-				</div>
-			</div>
-			<div class="row mt-3">
-				<div class="col-12">
-					<div class="alert alert-primary" v-if="!!nameProgress">
-						<div class="alert-body">
-Name Progress: {{ nameProgress }}
-<br>
-Progress: {{ progress }} <br>
-Status Uploading: {{ status }}
-						</div>
+		</transition-group>
+	</div>
+	
+	<div class="main__app container" v-if = "user !== null">
+		<div class="fixed-top navbar-light button-menu__app bg-light align-items-center py-1">
+			<button class="navbar-toggler-icon border-0 ml-2" @click.stop="state.menu__main = true"></button>
+
+			<div class="dropdown float-right d-inline mr-2">
+				<img class="avatar" :src="user.photoURL" data-toggle="dropdown" class="dropdown-toggle" @click="toggle"/>
+				<div class="dropdown-menu dropdown-custom">
+					<div class="dropdown-item h6">
+			{{ user.displayName }}
 					</div>
-					<button class="btn btn-block btn-primary" @click="post" v-if="auth.login">Posted</button>
-					<button class="btn btn-block btn-primary" @click="signInGoogle" v-else>Đăng nhập đế tải lên</button>
-				</div>
-				<div class="col-12" v-if="isLoading">
-					<div class="loader">
-						<loading
-	:can-cancel="false"
-	:is-full-page="true"
-	:color="'#007bff'"
-	:width=120 :height=120
-	:loader="'dots'"></loading>
-						<div>
-							{{ nameProgress }} progress {{ progress }} status {{ status }}
-						</div>
+					<div class="dropdown-item py-2 small">
+						<router-link class="text-dark dropdown-link" to="./My-Account.html"> Account Manager </router-link>
+					</div>
+					<div class="dropdown-item">
+						<button class="btn btn-sm btn-block btn-primary	" @click="logout">Logout</button>
 					</div>
 				</div>
 			</div>
 		</div>
+		
+		<main class="row main-view__app">
+			<div class="col-12">
+				<router-view>
+				</router-view>
+			</div>
+		</main>
+	</div>
+	
+	<login class = "login__app container" v-else />
+
+</div>
+
+<script>
+console.warn = console.error = e => (e + "").match(/@firebase\/database:/) || console.log(e + "")
+
+var isLg = device.ww >= 992;
+function notify (title, body, type, t = 3000) {
+	var html = `
+<div class="toast m-fixed-top ${type == "success" ? "bg-success text-light" : type == "danger" ? "bg-danger text-light" : "bg-dark text-light"} py-1 px-2">
+	<div class="toast-header">
+		<strong class="mr-auto h6"> ${title} </strong>
+		<button type="button" class="ml-2 mb-1 close">
+			<span class="text-light">&times;</span>
+		</button>
+	</div>
+	<div class="toast-body">
+		${body}
+	</div>
+</div>
+	`
+	var el = 
+	my(html).addClass("swipe-show")
+	.on(my.fx.animationEnd)
+	.then(function () {
+		setTimeout(e => {
+			my(this)
+			.removeClass("swipe-show")
+		})
+	})
+	.appendTo("body")
+	el.find(".close").click(e => {
+		el.addClass("swipe-hide")
+		.on(my.fx.animationEnd)
+		.then(function () {
+			setTimeout(e => {
+				my(this)
+				.removeClass("swipe-hide")
+			 })
+			this.remove()
+		})
+	})
+	setTimeout(e => {
+		el.find(".close").click()
+	}, t)
+}
+
+
+const routes = {
+	"./": Home,
+	"./upload-app.html": UploadApp,
+	"./swiper-editor.html": SwiperEditor,
+	"./delete-app.html": DeleteApp,
+	"./My-Account.html": MyAccount
+}
+Vue.use(RouteVue)
+var app = new Vue({
+	el: "#app",
+	routes,
+	data: {
+		state: {
+			menu__main: false
+		},
+		user: null,
+		currentRoute: "./",
+		isLg: isLg,
+		listItemMenu: {
+			"./": "Home",
+			"./upload-app.html": "Upload App",
+			"./swiper-editor.html": "Swiper Editor",
+			"./delete-app.html": "Delete App"
+		}
+	},
+	methods: {
+		toggle(e) {
+			var el = my(e.target).parent().find(".dropdown-menu")
+			el.toggleClass("show")
+			.css("left", function (old) {
+				return -my(this).innerWidth() + "px"
+			})
+		},
+		logout() {
+			auth.signOut()
+		}
+	},
+	components: {
+		Login
+	},
+	watch: {
+		currentRoute() {
+			this.state.menu__main = false
+		}
+	},
+	mounted() {
+		auth.onAuthStateChanged(
+user => {
+			 this.user = user
+			 this.$el.removeAttribute("hidden")
+		})
+	}
+})
+
+</script>
 <style>
 * {
 	margin: 0;
 	padding: 0;
 }
 body {
-	
+	font-size: 14px !important;
+	background-color: var(--light) !important;
 }
 
-.icon {
-	border-radius: 20px;
-	width: 80px;
-	height: 80px;
+.p-relative {
+	position: relative !important;
+}
+.p-absolute {
+	position: absolute !important;
 }
 
-.t-0 {
-	top: 0 !important;
-}
-
-.b-0 {
-	bottom: 0 !important;
-}
-
-.mt-7 {
-	margin-top: 4.5rem !important;
-}
-.mt-10 {
-	margin-top: 6rem !important;
-}
-.scroll {
-	width: 100%;
-	height: 200px;
-	white-space: nowrap;
-	overflow-x: scroll !important;
-	overflow-y: hidden !important;
-	-webkit-overflow-scrolling: touch !important;
-	-moz-overflow-scrolling: touch !important;
-	-ms-overflow-scrolling: touch !important;
-	-o-overflow-scrolling: touch !important;
-	overflow-scrolling: touch !important;
-	-webkit-overflow-style: -webkit-autohiding-scrollbar !important;
-	-moz-overflow-style: -moz-autohiding-scrollbar !important;
-	-ms-overflow-style: -ms-autohiding-scrollbar !important;
-	-o-overflow-style: -o-autohiding-scrollbar !important;
-}
-.scroll > div {
-	width: 40%;
+.menu__app {
+	width: 70%;
 	height: 100%;
-	display: inline-block;
+	position: fixed;
+	z-index: 9999;
+}
+.button-menu__app > button {
+	width: 2rem;
+	height: 2rem;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
 }
 
-.screenshoot {
-	border-radius: 10px;
+@media (min-width: 992px) {
+	.menu__app {
+		width: 30%;
+	}
+	.main__app {
+		margin-left: 30%;
+	}
+	.button-menu__app > button {
+		display: none;
+	}
 }
 
-.icon-more::after {
-	content: "";
-	width: 7px;
-	height: 7px;
-	border: 3px solid rgba(177, 177, 177, .5);
-	border-top: 0;
-	border-left: 0;
-	position: absolute;
+.bg-0 {
+	background-color: #00000000 !important;
+}
+.size-12 {
+	font-size: 12px !important;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+	transition: transform 0.2s linear;
+}
+.slide-enter, .slide-leave-to {
+	transform: translateX(-100%);
+}
+
+.avatar {
+	width: 2.7em;
+	height: 2.7em;
+	border-radius: 50%;
 	top: 0;
 	bottom: 0;
 	margin: auto;
-	right: 1.5em;
-	transform: rotate(45deg);
+	display: inline-block;
 }
 
-.detail-close {
-	height: 3.5em !important;
-	overflow-y: hidden;
-}
-.detail-open {
-	height: auto !important;
+.tmp-menu__app {
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9998 !important;
 }
 
-.appea-none {
-	-webkit-appearance: none !important;
-	border-radius: 0;
-	border: 1px solid rgba(0, 0, 0, .2);
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.2s linear;
+}
+.fade-enter, .fade-leave-to {
+	opacity: 0;
 }
 
-.scroll > div {
-   position: relative;
-   width: 40%;
-   height: 100%;
+.menu__app li {
+	border-left: 3px solid #00000000 !important;
 }
-.scroll > div > * {
-   position: absolute;
-}
-.scroll > div > .remove-file {
-   top: 0;
-   right: 0;
-   background-color: grey;
-   border-radius: 50%;
-   color: #fff;
-   width: 1em;
-   height: 1em;
-   text-align: center;
-   line-height: 1em;
-   text-vertial: middle;
-   z-index: 99999;
-}
-.scroll > div > img {
-   display: block;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-}
-* {
-	margin: 0;
-	padding: 0;
-}
-body {
-	
+.menu__app li._active {
+	border-left-color: #000 !important;
+	font-weight: bold;
 }
 
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, .5);
-    z-index: 9999;
-    text-align: center;
+.main-view__app {
+	padding-top: 5rem;
 }
-.loader > svg {
-    position: absolute;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
-    opacity: 1;
-    margin: auto;
+
+
+.bg-white {
+	background-color: #fff !important;
 }
-.loader > div {
-    position: absolute;
-    top: 50%;
-    opacity: 1;
-    font-size: 80%;
-    text-align: center;
-    transform: translateY(100%);
-    width: 100%;
+
+.m-fixed-top {
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	top: 0;
+	left: 0;
 }
-.avatar {
-    width: 2em;
-    height: 2em;
-    border-radius: 50%;
+.swipe-show {
+	animation: swipe .3s;
+}
+.swipe-hide {
+	animation: swipe .3s reverse;
+}
+@keyframes swipe {
+	from {
+		left: 100%;
+	}
+	to {
+		left: 0%;
+	}
 }
 </style>
-<script>
-!function (global, factory) {
-   global.onload = factory
-}(this, function () {
-var firebaseConfig = {
-	apiKey: "AIzaSyBLHGwZfk0XoRAtM6WwgqtKbEpAM4z6OSw",
-	authDomain: "store-app-7e82d.firebaseapp.com",
-	databaseURL: "https://store-app-7e82d.firebaseio.com",
-	projectId: "store-app-7e82d",
-	storageBucket: "store-app-7e82d.appspot.com",
-	messagingSenderId: "465528518914",
-	appId: "1:465528518914:web:f965f61aa254a4d8ab6a1b",
-	measurementId: "G-KRD443YXML"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-var database = firebase.database()
-var storage = firebase.storage()
-var configMdl = {
-	  spellChecker: false,/*
-	  autosave: {
-		  enabled: false,
-	  	  unique_id: "description"
-	  },*/
-	 //autofocus: true,
-	 //promptURLs: false,
-	 toolbar: [
-		{ name: "bold", action: SimpleMDE.toggleBold, className: "fa fa-bold", title: "Bold" },
-		{ name: "italic", action: SimpleMDE.toggleStrikethrough, className: "fa fa-strikethrough", title: "Strikethrough" },
-		{ name: "strikethrough", action: SimpleMDE.toggleItalic, className: "fa fa-italic", title: "Italic" },
-		{ name: "heading-1", action: SimpleMDE.toggleHeadingBigger, className: "fa fa-header fa-header-x", title: "Bold" },
-		{ name: "heading-1", action: SimpleMDE.toggleHeading1, className: "fa fa-header fa-header-x fa-header-1", title: "Bold" },
-		{ name: "heading-2", action: SimpleMDE.toggleHeading2, className: "fa fa-header fa-header-x fa-header-2", title: "Bold" },
-		{ name: "heading-3", action: SimpleMDE.toggleHeading3, className: "fa fa-header fa-header-x fa-header-3", title: "Bold" },
-					"|",
-		{ name: "code", action: SimpleMDE.toggleCodeBlock, className: "fa fa-code", title: "Code" },
-		{ name: "quote", action: SimpleMDE.toggleBlockquote, className: "fa fa-quote-left", title: "Quote" },
-		{ name: "unordered-list", action: SimpleMDE.toggleUnorderedList, className: "fa fa-list-ul", title: "Generic List" },
-		{ name: "ordered-list", action: SimpleMDE.toggleOrderedList, className: "fa fa-list-ol", title: "Numbered List" },
-		{ name: "table", action: SimpleMDE.drawTable, className: "fa fa-table", title: "Insert Table" },
-		{ name: "horizontal-rule", action: SimpleMDE.drawHorizontalRule, className: "fa fa-minus", title: "Insert Horizontal Line" },
-		{ name: "clean-block", action: SimpleMDE.cleanBlock, className: "fa fa-eraser fa-clean-block", title: "Clean block" },
-"|",
-		{ name: "bold", action: SimpleMDE.drawLink, className: "fa fa-link", title: "Create Link" },
-/*
-		{ name: "image",
-		  action: () => {
-			this.modalImage = true;
-			this.$store.dispatch('getFiles');
-		  },
-		  className: "fa fa-image",
-		  title: "Upload Image", },*/
-					"|",
-		  { name: "preview", action: SimpleMDE.togglePreview, className: "fa fa-eye no-disable", title: "Toggle Preview"},
-		  { name: "side-by-side", action: SimpleMDE.toggleSideBySide, className: "fa fa-columns no-disable no-mobile",title: "Toggle Side by Side"},
-		  { name: "fullscreen", action: SimpleMDE.toggleFullScreen, className: "fa fa-arrows-alt no-disable no-mobile", title: "Toggle Fullscreen"},
-					"|",
-		   { name: "undo", action: SimpleMDE.togglePreview, className: "fa fa-undo no-disable", title: "Undo"},
-		   { name: "redo", action: SimpleMDE.togglePreview, className: "fa fa-repeat no-disable", title: "Redo"}
-	   ]
-}
 
 
-function json (e) {
-   return typeof e === "string" ? btoa(e) : (typeof e).match(/object|function|symbol/) ? e : JSON.stringify(e)
-}
-function toURL(file) {
-   return new my.promise(e => {
-	 if (typeof file === "string")
-	 	e.done(file)
-	 else my(new FileReader)
-	 	.load(function () {
-		 	e.done(this.result)
-	 	})[0].readAsDataURL(file)
-   })
-}
-Vue.component("media", {
-	template: "\
-		<div class='ml-3'>\
-			<img class='img-fluid screenshoot border' v-if='file && (typeof file === \"string\" || file.type.match(/image/))' :src='base' @click=\"$emit('change-file')\"/>\
-			<span class='remove-file' @click.stop=\"$emit('remove-file')\">\
-				&times;\
-			</span>\
-		</div>\
-	",
-	data() {
-		return {
-			base: ""
-		}
-	},
-	props: ["file"],
-   watch: {
-      file() {
-        this.loadURL()
-      }
-   },
-   methods: {
-      loadURL() {
-        toURL(this.file)
-		 .then((e, f, args) => {
-		    this.base = args[0]
-		 }).end()
-      }
-   },
-	created() {
-        this.loadURL()
-	}
-})
-var app = new Vue({
-	el: ".container",
-	data: {
-		name: "",
-		package: "",
-		icon: null,
-		iconbase: null,
-		size: "",
-		versions: "",
-		type: "app",
-		infor: {
-			
-		},
-		screenshoot: [],
-		status: "",
-		nameProgress: "",
-		progress: "",
-		description: null,
-		isLoading: false,
-		auth: {
-		    login: firebase.auth().currentUser,
-		    photoURL: "",
-		    name: ""
-		}
-	},
-	watch: {
-		icon(n) {
-			toURL(n)
-			.then((a, b, c) => {
-				this.iconbase = c[0]
-			})
-			.end()
-		}
-	},
-	components: {
-	    loading: {
-	        props: {
-	            color: {
-      				type: String,
-      				"default": '#000'
-    			 },
-    			 height: {
-      				type: Number,
-      				"default": 240
-    			 },
-    			 width: {
-      				type: Number,
-      				"default": 60
-    			 },
-    			 zIndex: {
-    			     type: Number,
-    			     default: 9999
-    			 },
-    			 background: {
-    			     type: String,
-    			     default: "#000"
-    			 },
-    			 opacity: {
-    			     type: Number,
-    			     default: 0.5
-    			 }
-	        },
-	        render(_c) {
-	        	return _c('svg',{attrs:{"viewBox":"0 0 120 30","xmlns":"http://www.w3.org/2000/svg","fill":this.color,"width":this.width,"height":this.height}},[_c('circle',{attrs:{"cx":"15","cy":"15","r":"15"}},[_c('animate',{attrs:{"attributeName":"r","from":"15","to":"15","begin":"0s","dur":"0.8s","values":"15;9;15","calcMode":"linear","repeatCount":"indefinite"}}),_c('animate',{attrs:{"attributeName":"fill-opacity","from":"1","to":"1","begin":"0s","dur":"0.8s","values":"1;.5;1","calcMode":"linear","repeatCount":"indefinite"}})]),_c('circle',{attrs:{"cx":"60","cy":"15","r":"9","fill-opacity":"0.3"}},[_c('animate',{attrs:{"attributeName":"r","from":"9","to":"9","begin":"0s","dur":"0.8s","values":"9;15;9","calcMode":"linear","repeatCount":"indefinite"}}),_c('animate',{attrs:{"attributeName":"fill-opacity","from":"0.5","to":"0.5","begin":"0s","dur":"0.8s","values":".5;1;.5","calcMode":"linear","repeatCount":"indefinite"}})]),_c('circle',{attrs:{"cx":"105","cy":"15","r":"15"}},[_c('animate',{attrs:{"attributeName":"r","from":"15","to":"15","begin":"0s","dur":"0.8s","values":"15;9;15","calcMode":"linear","repeatCount":"indefinite"}}),_c('animate',{attrs:{"attributeName":"fill-opacity","from":"1","to":"1","begin":"0s","dur":"0.8s","values":"1;.5;1","calcMode":"linear","repeatCount":"indefinite"}})])])
-	        }
-	    }
-	},
-	methods: {
-		signInGoogle() {
-		    var provider = new firebase.auth.GoogleAuthProvider()
-			firebase.auth().signInWithPopup(provider)
-		},
-		signOut() {
-		    firebase.auth().signOut()
-		},
-		is() {
-			return (!(this.name + "").match(/\S/) || !(this.package + "").match(/\S/) || typeof this.icon === null || !(this.size + "").match(/\S/))
-		},
-		toURL(file) {
-			
-		},
-		inpFile(fn, nomulti) {
-		    my("<input type='file' hidden accept='*/(?:video|image)' " + (nomulti ? "" : "multiple") + ">")
-			 .change(fn)
-			 .blur(function () {
-				 this.remove()
-			 })
-			 .appendTo("body")
-			 .click()
-		},
-		inpMedia() {
-			 var _ = this.screenshoot
-			 this.inpFile(function(){
-				if (this.files.length)
-					_.push.apply(_, this.files)
-			 })
-		},
-		inpMediaIcon() {
-			var _ = this
-			 this.inpFile(function(){
-				if (this.files.length)
-					_.icon = this.files[0]
-			 }, true)
-		},
-		changeFile(index) {
-		    var _ = this
-		    this.inpFile(function(){
-    			if (this.files.length)
-					_.screenshoot
-					.splice.apply(
-						_.screenshoot,
-						[ index, 1 ]
-						.concat(
-							[].slice.call(this.files)
-						)
-    				)
-			})
-		},
-		removeFile(index) {
-		    this.screenshoot.splice(index, 1)
-		},
-		checkVers() {
-		    try {
-		        JSON.parse("{" + this.versions + "}")
-		        return true
-		    } catch (e) {
-		    	  return false
-		    }
-		},
-		getInforInDB() {
-		    if (!this.package.match(/\S/))
-				return alert("Id?")
-		    database
-		    .ref("apps/" + btoa(this.package))
-		    .once("value", e => {
-		        e = e.val()
-		        if (e === null || typeof e !== "object")
-					return alert("Không có dữ liệu của gói này")
-		        this.name = e.name
-		        this.icon = e.icon
-		        this.infor = e.infor
-		        this.size = e.size
-		        this.versions = decodeURIComponent(atob(e.versions))
-				 this.type = e.type
-				 this.screenshoot = e.screenshoot
-				 this.description.value(e.description)
-			})
-		},
-		post() {
-			if (this.is())
-				return 
-			if (!this.checkVers())
-				return alert("Version error")
-//var storage = firebase.storage()
-var ICON, SCREENSHOOT = [], _ = this
-_.isLoading = true
-new my.promise(rejack => {
-	// upload icon app!
-	
-	_.nameProgress = "icon"
-  if (typeof _.icon === "string") {
-	ICON = _.icon
-	_.status = "no change! done"
-	rejack.done()
-  }
-  else {
-	
-	var upTask = storage.ref("icons/" + _.package + ".png")
-	.put(_.icon, { contentType: _.icon.type })
-	
-	upTask.on(
-		"state_changed",
-		function (snapshot) {
-			// progress
-			_.progress = snapshot.bytesTransferred / snapshot.totalBytes * 100
-
-			_.status = snapshot.state
-		},
-		function () {
-			// error
-			_.status = "error"
-			_.isLoading = false
-			alert("Máy chủ storage từ chối kết nối")
-		},
-		function () {
-			_.status = "done"
-			upTask.snapshot.ref
-			.getDownloadURL()
-			.then(function (url) {
-				ICON = url
-				rejack.done()
-			})
-		}
-	)
-  }
-})
-.then(rejack => {
-
-	// upload screenshoot
-	_.screenshoot.length &&
-	upload(_.screenshoot[0], 0)
-	function upload (val, key) {
-		_.nameProgress = "screen " + key
-	  if (typeof val === "string") {
-	  	SCREENSHOOT[key++] = val
-	  	_.status = "no change! done"
-	  	if (key >= _.screenshoot.length) rejack.done();
-		else upload(_.screenshoot[key], key)
-	  }
-	  else {
-		var upTask = storage.ref("screenshoot/" + _.package + "/" + key + ".jpg")
-		.put(val, { contentType: val.type })
-
-		upTask.on(
-			"state_changed",
-			function (snapshot) {
-				// progress
-				_.progress = snapshot.bytesTransferred / snapshot.totalBytes * 100
-
-				_.status = snapshot.state
-			},
-			function () {
-				// error
-				_.status = "error"
-				if (key >= _.screenshoot.length) rejack.done();
-				 else upload(_.screenshoot[key], key)
-			},
-			function () {
-				_.status = "done"
-			  upTask.snapshot.ref
-			   .getDownloadURL()
-				.then(function(url) {
-					SCREENSHOOT[key++] = url
-					if (key >= _.screenshoot.length) rejack.done();
-				 	else upload(_.screenshoot[key], key)
-				})
-			}
-		)
-	  }
-	}
-})
-.then(rejack => {
-	_.nameProgress = "Posting database..."
-	_.progress = null
-	_.status = "running"
-try {
-	database.ref("apps/" + json(_.package)).set({
-		screenshoot: SCREENSHOOT,
-		name: _.name,
-		icon: ICON,
-		size: _.size,
-	   versions: btoa(encodeURIComponent(_.versions)),
-	   infor: _.infor,
-	   type: _.type,
-       time: Date.now(),
-      	description: _.description.value()
-	})
-	.then(function () {
-		_.status = "done!"
-		_.isLoading = false
-	})
-	.catch(function () {
-		_.status = "error?"
-		_.isLoading = false
-		alert("Máy chủ database từ chối kết nối")
-	})
-} catch (e) { alert("failed " + e) }
-})
-.end()
-
-		}
-	},
-	mounted() {
-		configMdl.element = this.$refs.description
-		 this.description = new SimpleMDE(configMdl)
-	}
-})
-
-
-firebase.auth().onAuthStateChanged(function (user) {
-  if (user) {
-	Vue.set(app.auth, "login", true)
-	Vue.set(app.auth, "photoURL", user.photoURL)
-	Vue.set(app.auth, "name", user.displayName)
-  } else {
-  	Vue.set(app.auth, "login", false)
-  }
-})
-})
-</script>
 	</body>
 </html>

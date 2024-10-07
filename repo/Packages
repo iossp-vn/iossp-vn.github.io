@@ -1,0 +1,42 @@
+Package: vn.iossp.iconrepo
+Version: 1.0
+Priority: required
+Section: System
+Essential: yes
+Maintainer: iOSSupport <iossp@hotmail.com>
+Architecture: iphoneos-arm
+Name: iOSSupport Icon
+Author: QuốcBK <iossp@hotmail.com>
+Description: Gói icon bổ trợ cho nguồn iOSSupport.
+Icon: file:///Library/IconRepos/System.png
+Filename: ./debs/vn.iossp.iconrepo_1.0_iphoneos-arm.deb
+Size: 44434
+MD5sum: 6659d112bf75bfcef4b91d2b5f679abc
+
+Package: vn.iossp.sslkillswitch
+Name: SSL Kill Switch
+Depends: mobilesubstrate, preferenceloader, vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Description: Blackbox tool to disable SSL certificate validation - including certificate pinning - within iOS Apps.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Alban Diquet <alban@isecpartners.com>
+Section: Tweak
+Version: 0.6-1
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.sslkillswitch_0.6-1_iphoneos-arm.deb
+Size: 6936
+MD5sum: ee4b6b253fca05b92762723b3e2e8416
+
+Package: vn.iossp.fixtube6
+Name: FixTube6
+Depends: mobilesubstrate, vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Description: Fix Youtube on iOS 6 and up.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Mọt <iossp@hotmail.com>
+Section: Tweak
+Version: 1.0
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.fixtube6_1.0_iphoneos-arm.deb
+Size: 47928
+MD5sum: 0dc199b988a6f3fbc36ed3851b530706

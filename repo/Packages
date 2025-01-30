@@ -40,3 +40,22 @@ Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.fixtube6_1.0_iphoneos-arm.deb
 Size: 47928
 MD5sum: 0dc199b988a6f3fbc36ed3851b530706
+
+Conflicts: us.hackulo.appsync50, us.hackulo.appsync50plus, com.hackyouriphone.appsync7, com.teiron.ppsync, appsync50plus2.25pp, com.linusyang.appsync, com.sull.appsyncunified, com.sull.appsyncunifiedbeta, com.xsellize.appsync50, com.xsellize.appsync50plus, appsync50plus.178, appsync50plus2.178, cydia.net.angelxwind.appsyncunified, com.ifucker.appsync, com.sexyphonetech.appsyncunified, appsyncunifiedofficial, org.digbick.asufixed, cn.mingmei.asu623517234615234813, science.xnu.substitute
+Depends: firmware (>= 5.0), firmware (<= 13.7), firmware (<< 12.0) | mobilesubstrate (>= 0.9.5100) | mobilesubstrate (<= 0.9.6301) | mobilesubstrate (= 0.9.7020) | mobilesubstrate (= 0.9.7033) | mobilesubstrate (>= 0.9.7034) | com.ex.substitute (>= 0.1.0), firmware (<< 12.0) | mobilesubstrate (<< 99.0) | com.ex.libsubstitute (>= 0.1.1)
+Depiction: https://cydia.akemi.ai/?page/net.angelxwind.appsyncunified
+Maintainer: iOSï£¿Support <iossp@hotmail.com>
+Homepage: https://cydia.akemi.ai/
+Provides: appsync
+Replaces: us.hackulo.appsync50
+Package: vn.iossp.appsyncunified
+Name: AppSync Unified
+Architecture: iphoneos-arm
+Description: Enables the ability to install unsigned/fakesigned iOS applications iOS 5 - 13.7.
+Section: Tweak
+Author: Linus Yang, Karen/ã‚ã‘ã¿ <karen@akemi.ai>
+Version: 84.0
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.appsyncunified_84.0_iphoneos-arm.deb
+Size: 64162
+MD5sum: 652d67ab16832186f8a6f0779054271a

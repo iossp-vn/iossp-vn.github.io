@@ -152,3 +152,16 @@ Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.pretify_1.0_iphoneos-arm.deb
 Size: 12944
 MD5sum: 96e71dbcdb879320a46fdc55275cc311
+
+Package: vn.iossp.clutch204
+Name: Clutch 2.0.4
+Version: 2.0.4
+Architecture: iphoneos-arm
+Description: Decrypt  iPAs iOS 7 - 10.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: KJCracks
+Section: Utilities
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/vn.iossp.clutch204_2.0.4_iphoneos-arm.deb
+Size: 457574
+MD5sum: 6448cfbf65f82c145a1a427de12248ab

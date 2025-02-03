@@ -153,11 +153,26 @@ Filename: ./debs/vn.iossp.pretify_1.0_iphoneos-arm.deb
 Size: 12944
 MD5sum: 96e71dbcdb879320a46fdc55275cc311
 
+Package: vn.iossp.clutch146
+Name: Clutch 1.4.6
+Version: 1.4.6
+Section: Utilities
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: KJCracks
+Architecture: iphoneos-arm
+Pre-Depends: firmware (>= 4.0), org.coolstar.cctools
+Depends: com.ericasadun.utilities, zip, gawk, adv-cmds, bigbosshackertools, firmware (>= 4.0), vn.iossp.iconrepo
+Description: Decrypt  iPAs iOS 4 - 6.
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/vn.iossp.clutch146_1.4.6_iphoneos-arm.deb
+Size: 187624
+MD5sum: 2d74bc4c315de31fc0324032539c7396
+
 Package: vn.iossp.clutch204
 Name: Clutch 2.0.4
 Version: 2.0.4
 Architecture: iphoneos-arm
-Depends: mobilesubstrate, vn.iossp.iconrepo
+Depends: mobilesubstrate, firmware (>= 7.0), vn.iossp.iconrepo
 Description: Decrypt  iPAs iOS 7 - 10.
 Maintainer: iOSSupport <iossp@hotmail.com>
 Author: KJCracks

@@ -297,3 +297,60 @@ Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.bfdecrypt_1.3.5_iphoneos-arm64.deb
 Size: 122682
 MD5sum: 62f4882d73b710376bfcdae4fe02c6a1
+
+Package: vn.iossp.netkillui
+Name: netKILLUI
+Version: 0.2.1-1
+Description: Kích mấy thằng xài wifi chùa của bạn¸
+Author: Teggers
+Depends: ru.rejail.arp-scan, ru.rejail.dsniff, ldid, adv-cmds, grep, network-cmds, shell-cmds, gawk, coreutils, vn.iossp.iconrepo
+Section: Tweak
+Architecture: iphoneos-arm
+Maintainer: iOSSupport <iossp@hotmail.com>
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.netkillui_0.2.1-1_iphoneos-arm.deb
+Size: 260918
+MD5sum: bbb69fbeab394cf63e1d5a0c516e0062
+
+Package: ru.rejail.arp-scan
+Name: arp-scan
+Version: 1.8.1-1
+Description: ARP scanning and fingerprinting tool. Arp-scan is a command-line tool that uses the ARP protocol to discover and fingerprint IP hosts on the local network. It is available under the GPL licence (GPLv3)
+Author: Roy Hills <Roy.Hills@nta-monitor.com>
+Depends: ru.rejail.libpcap
+Section: Utilities
+Architecture: iphoneos-arm
+Maintainer: ReJail <rejail@rejail.ru>
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/ru.rejail.arp-scan_1.8.1-1.deb
+Size: 226204
+MD5sum: b02ed0502f56190fee4bc6b5a42bac8f
+
+Package: ru.rejail.dsniff
+Name: dsniff
+Version: 2.4b2-1
+Description: Dsniff Suite Of Pentesting Tools For iPhone. dsniff is a collection of tools for network auditing and penetration testing. dsniff, filesnarf, mailsnarf, msgsnarf, urlsnarf, and webspy passively monitor a network for interesting data (passwords, e-mail, files, etc.). arpspoof, dnsspoof, and macof facilitate the interception of network traffic normally unavailable to an attacker (e.g, due to layer-2 switching). sshmitm and webmitm implement active monkey-in-the-middle attacks against redirected SSH and HTTPS sessions by exploiting weak bindings in ad-hoc PKI.
+Author: Dug Song <dugsong@monkey.org>
+Conflicts: org.mulliner.dsniff
+Replaces: org.mulliner.dsniff
+Section: Utilities
+Architecture: iphoneos-arm
+Maintainer: ReJail <rejail@rejail.ru>
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/ru.rejail.dsniff_2.4b2-1.deb
+Size: 671486
+MD5sum: fcf04c6ee7a396b519a352504aa5a195
+
+Package: ru.rejail.libpcap
+Name: libpcap
+Version: 1.4.0
+Description: Libpcap, a portable C/C++ library for network traffic capture.
+Author: libpcap <repo@hackyouriphone.org>
+Depends: mobilesubstrate
+Section: Utilities
+Architecture: iphoneos-arm
+Maintainer: ReJail <rejail@rejail.ru>
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/ru.rejail.libpcap_1.4.0.deb
+Size: 208138
+MD5sum: e9d3c4f33bde48077e4f12964cf97e65

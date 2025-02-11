@@ -382,3 +382,17 @@ Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.noytads_1.0.0-1+debug_iphoneos-arm.deb
 Size: 7350
 MD5sum: 4234a7661c2cb8da5f3bfdad7aca4e87
+
+Package: vn.iossp.tuberepair
+Name: TubeRepair [BETA]
+Description: TubeRepair is a tweak that redirects YouTube API traffic from the classic YouTube app, and the App Store YouTube app to a designated custom server. You could also just say that it fixes both applications. For assistance refer to the guide (https://tuberepair.bag-xml.com/guide/)
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: bag.xml, Requis
+Section: Tweak
+Depends: mobilesubstrate, preferenceloader, vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Version: 1.2-Beta-1
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.tuberepair_1.2-Beta-1_iphoneos-arm.deb
+Size: 100152
+MD5sum: 447ff7ed78f6cad0164d31a7858ecd48

@@ -1,0 +1,384 @@
+Package: vn.iossp.iconrepo
+Version: 1.0
+Priority: required
+Section: System
+Essential: yes
+Maintainer: iOSSupport <iossp@hotmail.com>
+Architecture: iphoneos-arm
+Name: iOSSupport Icon
+Author: QuốcBK <iossp@hotmail.com>
+Description: Gói icon bổ trợ cho nguồn iOSSupport.
+Icon: file:///Library/IconRepos/System.png
+Filename: ./debs/vn.iossp.iconrepo_1.0_iphoneos-arm.deb
+Size: 44434
+MD5sum: 6659d112bf75bfcef4b91d2b5f679abc
+
+Package: vn.iossp.sslkillswitch
+Name: SSL Kill Switch
+Depends: mobilesubstrate, preferenceloader, vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Description: Blackbox tool to disable SSL certificate validation - including certificate pinning - within iOS Apps.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Alban Diquet <alban@isecpartners.com>
+Section: Tweak
+Version: 0.6-1
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.sslkillswitch_0.6-1_iphoneos-arm.deb
+Size: 6936
+MD5sum: ee4b6b253fca05b92762723b3e2e8416
+
+Package: vn.iossp.fixtube6
+Name: FixTube6
+Depends: mobilesubstrate, vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Description: Fix Youtube on iOS 6 and up.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Mọt <iossp@hotmail.com>
+Section: Tweak
+Version: 1.0
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.fixtube6_1.0_iphoneos-arm.deb
+Size: 47928
+MD5sum: 0dc199b988a6f3fbc36ed3851b530706
+
+Conflicts: us.hackulo.appsync50, us.hackulo.appsync50plus, com.hackyouriphone.appsync7, com.teiron.ppsync, appsync50plus2.25pp, com.linusyang.appsync, com.sull.appsyncunified, com.sull.appsyncunifiedbeta, com.xsellize.appsync50, com.xsellize.appsync50plus, appsync50plus.178, appsync50plus2.178, cydia.net.angelxwind.appsyncunified, com.ifucker.appsync, com.sexyphonetech.appsyncunified, appsyncunifiedofficial, org.digbick.asufixed, cn.mingmei.asu623517234615234813, science.xnu.substitute
+Depends: firmware (>= 5.0), firmware (<= 13.7), firmware (<< 12.0) | mobilesubstrate (>= 0.9.5100) | mobilesubstrate (<= 0.9.6301) | mobilesubstrate (= 0.9.7020) | mobilesubstrate (= 0.9.7033) | mobilesubstrate (>= 0.9.7034) | com.ex.substitute (>= 0.1.0), firmware (<< 12.0) | mobilesubstrate (<< 99.0) | com.ex.libsubstitute (>= 0.1.1), vn.iossp.iconrepo
+Depiction: https://cydia.akemi.ai/?page/net.angelxwind.appsyncunified
+Maintainer: iOSï£¿Support <iossp@hotmail.com>
+Homepage: https://cydia.akemi.ai/
+Provides: appsync
+Replaces: us.hackulo.appsync50
+Package: vn.iossp.appsyncunified
+Name: AppSync Unified
+Architecture: iphoneos-arm
+Description: Enables the ability to install unsigned/fakesigned iOS applications iOS 5 - 13.7.
+Section: Tweak
+Author: Linus Yang, Karen/ã‚ã‘ã¿ <karen@akemi.ai>
+Version: 84.0
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.appsyncunified_84.0_iphoneos-arm.deb
+Size: 64162
+MD5sum: 652d67ab16832186f8a6f0779054271a
+
+Package: vn.iossp.ytbnoad
+Section: Tweak
+Maintainer: iOSSupport <iossp@hotmail.com>
+Architecture: iphoneos-arm
+Version: 0.1
+Depends: mobilesubstrate, vn.iossp.iconrepo
+Conflicts: me.alfhaily.adblockforyoutube
+Description: remove ads in Youtube app on iOS 6.
+Name: YoutubeNoAd
+Author: Linus Yang
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.ytbnoad_0.1_iphoneos-arm.deb
+Size: 50704
+MD5sum: 14a06e7e67749f526bb570d167554848
+
+Package: vn.iossp.disableyoutubeupdates
+Name: DisableYouTubeUpdates
+Depends: mobilesubstrate, vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Description: Disables YouTube update prompts.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Patrick_Griffin
+Section: Tweak
+Version: 0.0.1
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.disableyoutubeupdates_0.0.1_iphoneos-arm.deb
+Size: 2198
+MD5sum: 2fd1ead5f6e83f4e63ee8ff8214724c6
+
+Name: Filza File Manager
+Package: vn.iossp.filza
+Priority: optional
+Depends: firmware (>= 7.0), zip, unzip, gzip, unrar, p7zip, vn.iossp.iconrepo
+Conflicts: com.tigisoftware.filza64bit
+Version: 3.6.3
+Architecture: iphoneos-arm
+Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 7 - 12.
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=filzafilemanagerDp
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=filzafilemanagerDp
+Sponsor: thebigboss.org <http://thebigboss.org>
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: TIGI Software <satashi2009@gmail.com>
+Section: Utilities
+Tag: purpose::uikit, compatible::ios7, compatible::ios8, compatible::ios9, compatible::ios10, compatible::ios11, compatible::ios12
+dev: satashi2009
+Icon: file:///Library/IconRepos/Application.png
+Filename: ./debs/vn.iossp.filza_3.6.3_iphoneos-arm.deb
+Size: 12408394
+MD5sum: 878c381e1400c1a6c14f71a6e4e84ae9
+
+Package: vn.iossp.legacyappstore
+Name: LegacyAppStore
+Depends: mobilesubstrate, firmware (>= 2.0), vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Description: I'm just a regular everyday normal mothernigger.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Invoxi
+Section: Tweak
+Version: 1.0
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.legacyappstore_1.0_iphoneos-arm.deb
+Size: 7222
+MD5sum: 5e01285c8519bfb1b5b44a875d57df46
+
+Package: vn.iossp.noyoutubemusicads
+Name: NoYouTubeMusicAds
+Architecture: iphoneos-arm
+Description: An awesome YouTube Music AdBlock and play background tweak!
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: atebitsy
+Section: Tweak
+Depends: mobilesubstrate (>= 0.9.5000), vn.iossp.iconrepo
+Depiction: https://www.atebitsy.com/repo/package/noyoutubemusicads/index.html
+Version: 3.89.4
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.noyoutubemusicads_3.89.4_iphoneos-arm.deb
+Size: 14298
+MD5sum: b5235a63340f531d869a5089d5589b94
+
+Package: vn.iossp.pretify
+Name: Pretify
+Depends: mobilesubstrate, vn.iossp.iconrepo
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Premium hack for Spotify.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Vincent Lim
+Section: Tweak
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.pretify_1.0_iphoneos-arm.deb
+Size: 12944
+MD5sum: 96e71dbcdb879320a46fdc55275cc311
+
+Package: vn.iossp.clutch146
+Name: Clutch 1.4.6
+Version: 1.4.6
+Section: Utilities
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: KJCracks
+Architecture: iphoneos-arm
+Pre-Depends: firmware (>= 4.0), org.coolstar.cctools
+Depends: com.ericasadun.utilities, zip, gawk, adv-cmds, bigbosshackertools, firmware (>= 4.0), vn.iossp.iconrepo
+Description: Decrypt  iPAs iOS 4 - 6.
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/vn.iossp.clutch146_1.4.6_iphoneos-arm.deb
+Size: 187624
+MD5sum: 2d74bc4c315de31fc0324032539c7396
+
+Package: vn.iossp.clutch204
+Name: Clutch 2.0.4
+Version: 2.0.4
+Architecture: iphoneos-arm
+Depends: mobilesubstrate, firmware (>= 7.0), vn.iossp.iconrepo
+Description: Decrypt  iPAs iOS 7 - 10.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: KJCracks
+Section: Utilities
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/vn.iossp.clutch204_2.0.4_iphoneos-arm.deb
+Size: 457574
+MD5sum: 6448cfbf65f82c145a1a427de12248ab
+
+Package: vn.iossp.reprovision
+Name: ReProvision Reborn
+Version: 0.8.4~release
+Description: Re-sign applications on your device.
+Section: Application
+Depends: firmware (>= 9.0), vn.iossp.iconrepo
+Conflicts: com.matchstic.reprovision
+Architecture: iphoneos-arm
+Author: Soh Satoh, Matt Clarke
+Maintainer: iOSSupport <iossp@hotmail.com>
+Icon: file:///Library/IconRepos/Application.png
+Filename: ./debs/vn.iossp.reprovision_0.8.4~release_iphoneos-arm.deb
+Size: 16789140
+MD5sum: 86a2d7c98ccaa35f152b7ca12e62bd46
+
+Package: vn.iossp.gesturesxs
+Name: GesturesXS
+Version: 3.0
+Section: Tweak
+Architecture: iphoneos-arm
+Depends: mobilesubstrate, vn.iossp.iconrepo
+Author: Ryan Nair
+Maintainer: iOSSupport <iossp@hotmail.com>
+Description: iPhone X gestures, nothing else!
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.gesturesxs_3.0_iphoneos-arm.deb
+Size: 5496
+MD5sum: 66118995547f071fca911acf43a017d3
+
+Package: vn.iossp.moderndock
+Name: ModernDock
+Depends: mobilesubstrate, vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Description: Enables the native iPhone X dock on older devices.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: NoisyFlake
+Section: Tweak
+Version: 1.0.1
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.moderndock_1.0.1_iphoneos-arm.deb
+Size: 2350
+MD5sum: 500637ad73654206d0d8a51cf080cf06
+
+Package: vn.iossp.youtubepatcher
+Name: YouTubePatcher
+Depends: mobilesubstrate, firmware (>= 10.0), vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Description: No inline Ads/Background Play back for YouTube and YouTube Music (iOS >= 10)
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: ichitaso
+Section: Tweak
+Version: 0.3
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.youtubepatcher_0.3_iphoneos-arm.deb
+Size: 5038
+MD5sum: 69b3786f5bf2f31e79698f5921d6bba0
+
+Package: vn.iossp.appstoreplusplus
+Name: AppStore++
+Version: 0.10.0
+Description: Allows you to downgrade/upgrade apps in the AppStore on iOS 11-15.
+Section: Tweak
+Depends: firmware (>= 11.0), mobilesubstrate, vn.iossp.iconrepo
+Conflicts: com.unlimapps.uaupdatetools
+Priority: optional
+Architecture: iphoneos-arm
+Author: CokePokes
+Maintainer: iOSSupport <iossp@hotmail.com>
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.appstoreplusplus_0.10.0_iphoneos-arm.deb
+Size: 4216090
+MD5sum: 51b3b65574e108709634439c904b695c
+
+Package: vn.iossp.netkillui11
+Name: netKillUIbeta (iOS 11)
+Version: 0.2.1-1
+Description: Kích mấy thằng xài wifi chùa của bạn.
+Author: Teggers
+Depends: adv-cmds, grep, network-cmds, shell-cmds, gawk, coreutils, firmware (>= 11.0), vn.iossp.iconrepo
+Conflicts: eu.teggers.netKillUI
+Section: Tweak
+Architecture: iphoneos-arm
+Maintainer: iOSSupport <iossp@hotmail.com>
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.netkillui11_0.2.1-1_iphoneos-arm.deb
+Size: 813318
+MD5sum: 6fb24769781dd99fcd203f8a4a6ed7d5
+
+Package: vn.iossp.fiona
+Name: Fiona
+Author: julioverne
+Version: 0.1
+Depends: mobilesubstrate, preferenceloader, vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Description: Keep WiFi Always Connected.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Section: Tweak
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.fiona_0.1_iphoneos-arm.deb
+Size: 48902
+MD5sum: 6d73b549a5ee86abedfe041a86876a1f
+
+Package: vn.iossp.bfdecrypt
+Name: bfdecrypt
+Description: bfdecrypt for iOS 11+, decrypt app.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: BishopFox
+Section: Tweak
+Depends: mobilesubstrate, com.opa334.altlist, firmware (>=11.0), vn.iossp.iconrepo
+Architecture: iphoneos-arm64
+Version: 1.3.5
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.bfdecrypt_1.3.5_iphoneos-arm64.deb
+Size: 122682
+MD5sum: 62f4882d73b710376bfcdae4fe02c6a1
+
+Package: vn.iossp.netkillui
+Name: netKILLUI
+Version: 0.2.1-1
+Description: Kích mấy thằng xài wifi chùa của bạn¸
+Author: Teggers
+Depends: ru.rejail.arp-scan, ru.rejail.dsniff, ldid, adv-cmds, grep, network-cmds, shell-cmds, gawk, coreutils, vn.iossp.iconrepo
+Section: Tweak
+Architecture: iphoneos-arm
+Maintainer: iOSSupport <iossp@hotmail.com>
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.netkillui_0.2.1-1_iphoneos-arm.deb
+Size: 260918
+MD5sum: bbb69fbeab394cf63e1d5a0c516e0062
+
+Package: ru.rejail.arp-scan
+Name: arp-scan
+Version: 1.8.1-1
+Description: ARP scanning and fingerprinting tool. Arp-scan is a command-line tool that uses the ARP protocol to discover and fingerprint IP hosts on the local network. It is available under the GPL licence (GPLv3)
+Author: Roy Hills <Roy.Hills@nta-monitor.com>
+Depends: ru.rejail.libpcap
+Section: Utilities
+Architecture: iphoneos-arm
+Maintainer: ReJail <rejail@rejail.ru>
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/ru.rejail.arp-scan_1.8.1-1.deb
+Size: 226204
+MD5sum: b02ed0502f56190fee4bc6b5a42bac8f
+
+Package: ru.rejail.dsniff
+Name: dsniff
+Version: 2.4b2-1
+Description: Dsniff Suite Of Pentesting Tools For iPhone. dsniff is a collection of tools for network auditing and penetration testing. dsniff, filesnarf, mailsnarf, msgsnarf, urlsnarf, and webspy passively monitor a network for interesting data (passwords, e-mail, files, etc.). arpspoof, dnsspoof, and macof facilitate the interception of network traffic normally unavailable to an attacker (e.g, due to layer-2 switching). sshmitm and webmitm implement active monkey-in-the-middle attacks against redirected SSH and HTTPS sessions by exploiting weak bindings in ad-hoc PKI.
+Author: Dug Song <dugsong@monkey.org>
+Conflicts: org.mulliner.dsniff
+Replaces: org.mulliner.dsniff
+Section: Utilities
+Architecture: iphoneos-arm
+Maintainer: ReJail <rejail@rejail.ru>
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/ru.rejail.dsniff_2.4b2-1.deb
+Size: 671486
+MD5sum: fcf04c6ee7a396b519a352504aa5a195
+
+Package: ru.rejail.libpcap
+Name: libpcap
+Version: 1.4.0
+Description: Libpcap, a portable C/C++ library for network traffic capture.
+Author: libpcap <repo@hackyouriphone.org>
+Depends: mobilesubstrate
+Section: Utilities
+Architecture: iphoneos-arm
+Maintainer: ReJail <rejail@rejail.ru>
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/ru.rejail.libpcap_1.4.0.deb
+Size: 208138
+MD5sum: e9d3c4f33bde48077e4f12964cf97e65
+
+Package: vn.iossp.letmepass
+Name: LetMePass
+Description: Bypasses YouTube's update alert
+Depends: mobilesubstrate, vn.iossp.iconrepo
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Snoolie K
+Section: Tweak
+Architecture: iphoneos-arm
+Version: 1.4
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.letmepass_1.4_iphoneos-arm.deb
+Size: 5446
+MD5sum: 52f0c3c93c36590fc622f3a7de3de26a
+
+Package: vn.iossp.noytads
+Name: NoYTAds
+Author: zachary7829
+Description: No Ads in YouTube.
+Depends: mobilesubstrate, vn.iossp.iconrepo
+Maintainer: iOSSupport <iossp@hotmail.com>
+Architecture: iphoneos-arm
+Section: Tweak
+Version: 1.0.0-1+debug
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.noytads_1.0.0-1+debug_iphoneos-arm.deb
+Size: 7350
+MD5sum: 4234a7661c2cb8da5f3bfdad7aca4e87

@@ -110,20 +110,6 @@ Filename: ./debs/vn.iossp.filza_3.6.3_iphoneos-arm.deb
 Size: 12408394
 MD5sum: 878c381e1400c1a6c14f71a6e4e84ae9
 
-Package: vn.iossp.legacyappstore
-Name: LegacyAppStore
-Depends: mobilesubstrate, firmware (>= 2.0), vn.iossp.iconrepo
-Architecture: iphoneos-arm
-Description: I'm just a regular everyday normal mothernigger.
-Maintainer: iOSSupport <iossp@hotmail.com>
-Author: Invoxi
-Section: Tweak
-Version: 1.0
-Icon: file:///Library/IconRepos/Tweak.png
-Filename: ./debs/vn.iossp.legacyappstore_1.0_iphoneos-arm.deb
-Size: 7222
-MD5sum: 5e01285c8519bfb1b5b44a875d57df46
-
 Package: vn.iossp.noyoutubemusicads
 Name: NoYouTubeMusicAds
 Architecture: iphoneos-arm
@@ -396,3 +382,17 @@ Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.tuberepair_1.2-Beta-1_iphoneos-arm.deb
 Size: 100152
 MD5sum: 447ff7ed78f6cad0164d31a7858ecd48
+
+Package: vn.iossp.classiclockscreen
+Name: ClassicLockScreen
+Version: 3.3.1k
+Depends: firmware (>= 7.0), mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.2), curl, org.coolstar.libclassictelephonyui, vn.iossp.legacyappstore, vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Author: CoolStar, Jeremy Goulet, Phillip Tennen <repo@hackyouriphone.org>
+Section: Tweak
+Description: iOS 6 LockScreen for iOS 7 - 9.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.classiclockscreen_3.3.1k_iphoneos-arm.deb
+Size: 736828
+MD5sum: bed4e8a5112792ec93366ed55288aa70

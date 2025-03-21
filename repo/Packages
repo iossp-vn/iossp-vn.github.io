@@ -12,6 +12,8 @@ Icon: file:///Library/IconRepos/System.png
 Filename: ./debs/vn.iossp.iconrepo_1.0_iphoneos-arm.deb
 Size: 44434
 MD5sum: 6659d112bf75bfcef4b91d2b5f679abc
+SHA1: 815535230a7905a68528755b5438508460ca402c
+SHA256: c395246b31c311fe84d6a39e068e56c3f4acc27550f836b2be1ab73da91af87d
 
 Package: vn.iossp.sslkillswitch
 Name: SSL Kill Switch
@@ -396,3 +398,20 @@ Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.classiclockscreen_3.3.1k_iphoneos-arm.deb
 Size: 736828
 MD5sum: bed4e8a5112792ec93366ed55288aa70
+
+Package: vn.iossp.cacheclearer11
+Name: CacheClearer
+Depends: firmware (>= 7.0), mobilesubstrate (>= 0.9.5001),vn.iossp.iconrepo
+Conflicts: com.rpetrich.cacheclearer
+Architecture: iphoneos-arm
+Description: Clear app caches from the Usage section in Settings
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Ryan Petrich, julioverne
+Section: Tweak
+Version: 0.1a
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.cacheclearer11_0.1a_iphoneos-arm.deb
+Size: 9272
+MD5sum: af6969b764325daac6612e089d9eee74
+SHA1: 2200d830427191d740a93e4438b3f907b825fbff
+SHA256: bd01c999aa8bfe56fe8fcc99df13e6264fcab338ed9263016ddd79ca3eb2ad33

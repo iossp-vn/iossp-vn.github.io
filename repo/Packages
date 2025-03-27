@@ -401,7 +401,7 @@ MD5sum: bed4e8a5112792ec93366ed55288aa70
 
 Package: vn.iossp.cacheclearer11
 Name: CacheClearer
-Depends: firmware (>= 7.0), mobilesubstrate (>= 0.9.5001),vn.iossp.iconrepo
+Depends: firmware (>= 7.0), mobilesubstrate (>= 0.9.5001), vn.iossp.iconrepo
 Conflicts: com.rpetrich.cacheclearer
 Architecture: iphoneos-arm
 Description: Clear app caches from the Usage section in Settings
@@ -415,3 +415,21 @@ Size: 9272
 MD5sum: af6969b764325daac6612e089d9eee74
 SHA1: 2200d830427191d740a93e4438b3f907b825fbff
 SHA256: bd01c999aa8bfe56fe8fcc99df13e6264fcab338ed9263016ddd79ca3eb2ad33
+
+Package: vn.iossp.appadmin
+Name: App Admin
+Version: 1.0r-102
+Description: Downgrade iOS apps to any previous version! No AppSync needed!!!
+Section: System
+Depends: firmware (>= 7.0), mobilesubstrate, vn.iossp.iconrepo
+Conflicts: it.marcocristalli.asupdatehider
+Priority: optional
+Architecture: iphoneos-arm
+Author: UnlimApps Inc.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Icon: file:///Library/IconRepos/System.png
+Filename: ./debs/vn.iossp.appadmin_1.0r-102_iphoneos-arm.deb
+Size: 850136
+MD5sum: 3749c2f8784164dd864399c42a84516a
+SHA1: 6690fef4d6e7b991b21849c862d595b7ed013ae0
+SHA256: 0b519b3d5c3f965e486529a0e96bfe3536d227aa25ed0f44f6630f077d1fa23d

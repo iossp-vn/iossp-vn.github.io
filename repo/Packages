@@ -541,3 +541,78 @@ Icon: file:///Library/IconRepos/Application.png
 Filename: ./debs/vn.iossp.ifile_2.2.0-1_iphoneos-arm.deb
 Size: 9746608
 MD5sum: e8d475809b9d332625cc497ec9e065f4
+
+Package: vn.iossp.kDFUApp
+Name: kDFUApp
+Version: 1.0.3
+Architecture: iphoneos-arm
+Depends: openssl, libcrippy-1.0.0, libpartialzip-1.0.0, curl, kloader, vn.iossp.kDFUBundles, firmware (>= 6.0), vn.iossp.iconrepo
+Priority: optional
+Description: easy way to get into kDFU mode.
+Author: tihmstar
+Maintainer: iOSSupport <iossp@hotmail.com>
+Section: System
+Icon: file:///Library/IconRepos/System.png
+Filename: ./debs/vn.iossp.kDFUApp_1.0.3_iphoneos-arm.deb
+Size: 80282
+MD5sum: ac8d238259a12cc98e47e36b0f8b4095
+
+Package: vn.iossp.kDFUBundles
+Name: kDFUApp Bundles
+Version: 1.0.1
+Architecture: iphoneos-arm
+Depends: vn.iossp.kDFUApp, vn.iossp.iconrepo
+Description: More device support for kDFUApp
+Author: LukeZGD
+Maintainer: iOSSupport <iossp@hotmail.com>
+Section: System
+Icon: file:///Library/IconRepos/System.png
+Filename: ./debs/vn.iossp.kDFUBundles_1.0.1_iphoneos-arm.deb
+Size: 10764
+MD5sum: 5297fac064dff54863a2f0cbd920e5f4
+
+Package: libpartialzip-1.0.0
+Name: libpartialzip-1.0.0
+Version: 1.0
+Section: Utilities
+Depends: firmware (>= 6.0), libcrippy-1.0.0, vn.iossp.iconrepo
+Priority: optional
+Architecture: iphoneos-arm
+Author: Drew Alden, Ethan Laur, Joshua Lee Tucker, L0 Ki, Patroklos Argyroudis
+Maintainer: iOSSupport <iossp@hotmail.com>
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/libpartialzip-1.0.0_1.0_iphoneos-arm.deb
+Size: 6854
+MD5sum: 3b82ed4cb8847123bad7c111ff47b203
+
+Package: libcrippy-1.0.0
+Name: libcrippy-1.0.0
+Version: 1.0
+Section: Utilities
+Depends: firmware (>= 6.0), vn.iossp.iconrepo
+Priority: optional
+Architecture: iphoneos-arm
+Author: Drew Alden, Ethan Laur, Joshua Lee Tucker, L0 Ki, Patroklos Argyroudis
+Maintainer: iOSSupport <iossp@hotmail.com>
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/libcrippy-1.0.0_1.0_iphoneos-arm.deb
+Size: 15888
+MD5sum: bd0fbd0d732c096279bbdc670e6e753e
+
+Package: kloader
+Name: kloader
+Version: 1.0
+Section: Utilities
+Depends: firmware (>= 6.0), vn.iossp.iconrepo
+Conflicts: cy+cpu.arm64
+Description: Don't install if you don't know what that is
+	Do not install this package if you don't know what this is.
+	Installing this on a production device is not recommended.
+Priority: optional
+Architecture: iphoneos-arm
+Author: winocm, xerub
+Maintainer: iOSSupport <iossp@hotmail.com>
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/kloader_1.0_iphoneos-arm.deb
+Size: 7968
+MD5sum: bf737cdfc86feb9808bfa86c20d4ba97

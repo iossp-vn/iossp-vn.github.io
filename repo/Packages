@@ -60,6 +60,21 @@ Filename: ./debs/vn.iossp.appsyncunified_84.0_iphoneos-arm.deb
 Size: 64162
 MD5sum: 652d67ab16832186f8a6f0779054271a
 
+Package: com.iossp.appsync40plus
+Version: 1.2.2
+Section: Tweak
+Maintainer: iOSSupport <iossp@hotmail.com>
+Pre-Depends: firmware (>= 4.0)
+Architecture: iphoneos-arm
+Homepage: https://cydia.angelxwind.net/
+Name: AppSync for iOS 4.0
+Author: Karen/あけみ
+Description: AppSync Unified allows you to sync and install unsigned iOS applications. Only for iOS 4.
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/com.iossp.appsync40plus_1.2.2_iphoneos-arm.deb
+Size: 9206
+MD5sum: cbf576006469cd91babfde1ae4545c57
+
 Package: vn.iossp.ytbnoad
 Section: Tweak
 Maintainer: iOSSupport <iossp@hotmail.com>
@@ -527,20 +542,19 @@ Filename: ./debs/vn.iossp.adowngrader_0.0.2-7_iphoneos-arm.deb
 Size: 58202
 MD5sum: 1a18918fad94b3f322920f3317506f07
 
-Package: vn.iossp.ifile
-Version: 2.2.0-1
+Package: com.iossp.ifile
+Version: 1.8.1-1
 Section: Application
 Maintainer: iOSSupport <iossp@hotmail.com>
-Depends: file-cmds, zip, unzip, p7zip, gzip, bzip2, unrar, diskdev-cmds, vn.iossp.iconrepo
-Pre-Depends: vn.iossp.iconfix
+Depends: com.iossp.iconrepo, file-cmds, zip, unzip, p7zip, gzip, bzip2, unrar, diskdev-cmds
 Architecture: iphoneos-arm
-Description: A File Manager and Viewer. iFile is a file manager runnning under user root. It allows fast navigation through the iPhone file system.
+Description: Trình quản lý tệp tin cho iphone
 Name: iFile
-Author: Carsten Heinelt <repo@cydia.vn>
+Author: elpelle6 
 Icon: file:///Library/IconRepos/Application.png
-Filename: ./debs/vn.iossp.ifile_2.2.0-1_iphoneos-arm.deb
-Size: 9746608
-MD5sum: e8d475809b9d332625cc497ec9e065f4
+Filename: ./debs/com.iossp.ifile_1.8.1-1_iphoneos-arm.deb
+Size: 7156154
+MD5sum: aa60882bb8c72b7f4447b1e4ee72b1c7
 
 Package: vn.iossp.kDFUApp
 Name: kDFUApp

@@ -203,19 +203,19 @@
 		<section class="container fixed-bottom bg-light py-1 toolbar" v-if="tabSelect != 'inforApp'">
 			<div class="row">
 				<div class="col-3 text-center line-height-0" @click="switchT('hot')">
-						<img :src="'/store/svg/home' + (tabSelect == 'hot' ? '-selected.svg' : '.svg')" /><br>
+						<img :src="'/store/svgs/home' + (tabSelect == 'hot' ? '-selected.svg' : '.svg')" /><br>
 						<small class="text-secondary">Home</small>
 				</div>
 				<div class="col-3 text-center line-height-0" @click="switchT('game')" @click.once="load('game')">
-						<img :src="'/store/svg/game' + (tabSelect == 'game' ? '-selected.svg' : '.svg')" /><br>
+						<img :src="'/store/svgs/game' + (tabSelect == 'game' ? '-selected.svg' : '.svg')" /><br>
 						<small class="text-secondary">Game</small>
 				</div>
 				<div class="col-3 text-center line-height-0" @click="switchT('app')" @click.once="load('app')">
-						<img :src="'/store/svg/app' + (tabSelect == 'app' ? '-selected.svg' : '.svg')" /><br>
+						<img :src="'/store/svgs/app' + (tabSelect == 'app' ? '-selected.svg' : '.svg')" /><br>
 						<small class="text-secondary">App</small>
 				</div>
 				<div class="col-3 text-center line-height-0" @click="tabSelect = 'search'">
-						<img :src="'/store/svg/search' + (tabSelect == 'search' ? '-selected.svg' : '.svg')" /><br>
+						<img :src="'/store/svgs/search' + (tabSelect == 'search' ? '-selected.svg' : '.svg')" /><br>
 						<small class="text-secondary">Search</small>
 				</div>
 			</div>
@@ -267,7 +267,7 @@
 			<transition-group name="fade-app" tag="div" class="row">
 <!-- $root = vue root -->
 				<div class="col-12 mt-3 h5 text-bold" :key="'title'">
-					<img src="/store/svg/hot.svg" /> Top Download
+					<img src="/store/svgs/hot.svg" /> Top Download
 				</div>
 				<div class="col-3 col-sm-4 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in appsHot" :key="equalKey(key)" @click="$root.goto(key, app)">
 					<img class="img-fluid icon-sm border" :src="app.icon" style="border-radius: 10px"/>
@@ -285,11 +285,11 @@
 			<div class="my-3 row text-primary text-center">
 				<div class="col-12" v-if="isLoaded" @click="$emit('more')">
 					<div>Thêm</div>
-					<img src="/store/svg/more.svg" class="loading" />
+					<img src="/store/svgs/more.svg" class="loading" />
 				</div>
 				<div class="col-12" v-else>
 					<div>Đang tải...</div>
-					<img src="../svg/loading.svg" style="width: 1.5rem; height: 1.5rem" />
+					<img src="../svgs/loading.svg" style="width: 1.5rem; height: 1.5rem" />
 				</div>
 			</div>
 		</section>

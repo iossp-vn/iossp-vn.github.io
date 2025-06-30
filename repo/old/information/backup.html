@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>iOS Support</title>
+		<link rel=stylesheet href="style.min.css"></link>
+		<meta name=viewport content='width=device-width, initial-scale=1.0, user-scalable=no, minium-scalable=1.0, maximum-scalable=1.0' charset="utf-8"/>
+		<script src="/js/polyfill-0.1.42.min.js"></script>
+		<link rel=stylesheet href="/css/bootstrap.min.css"></link>
+
+	</head>
+	<body>
+
+	<div id = "preloader" class="bg-light">
+		<img src="../../gif/preloader.gif" />
+	</div>
+
+	<div class="container" id = "app" v-if="!!inforApp.app" hidden>
+		<!--<div class="row">
+				<div class="col-12 my-2" @click="back()">
+					&lt; Back
+				</div>
+		</div>-->
+		<div class="row">
+			<div class="col-4 col-sm-3 col-md-3 col-lg-2 col-xl-2">	
+				<img class="icon border" :src="inforApp.app.icon" :key="inforApp.app.icon">
+			</div>
+			<div class="col position-relative">
+				<div class="h5 t-0 position-absolute">
+					{{ inforApp.app.name }}
+				</div>
+				<div class="small-14 text-secondary b-0 position-absolute">
+						<span>{{ sizeof(inforApp.app.size) }}</span> | <span v-if="inforApp.app.infor"> {{ inforApp.app.infor.developer }}</span>
+				</div>
+			</div>
+		</div>
+			
+		<!-- Information -->
+		<div class="row mt-5" v-if="!!inforApp.app.infor">
+			<div class="col-12 text-bold h6 mb-0">
+				Information
+			</div>
+			<div class="col-12">
+				<table class="table table-sm w3-7 border-0">
+					<tr v-for="(val, key) in inforApp.app.infor" class="border-0">
+						<td class="text-secondary text-capitalize border-0 small-14"> {{ key }} </td>
+						<td class="border-0 small-14"> {{ val }} </td>
+					</tr>
+				</table>
+			</div>
+		</div>
+			
+		<!-- Screenshoot -->
+		<div class="row mt-3" v-if="!!inforApp.app.screenshoot">
+			<div class="col-12 text-bold h6 mb-0">
+				Screenshoot
+			</div>
+			<div class="col-12 mt-3">
+				<div class="scroll">
+					<img class="img-fluid screenshoot ml-3 border" :src="url" v-for="url in inforApp.app.screenshoot" :key="inforApp.app.icon + url"/>
+				</div>
+			</div>
+		</div>
+			
+		<!-- Description -->
+		<div class="row mt-3" v-if="!!inforApp.app.description">
+			<div class="col-12 text-bold h6 mb-0 icon-more" @click.prevent="$set(inforApp, 'isOpenDescription', !inforApp.isOpenDescription)">
+				Description
+			</div>
+			<div class="col-12 mt-3 small-14 text-secondary detail-close detail-open" v-html="marked(inforApp.app.description)">
+
+			</div>
+		</div>
+			
+		<!-- hot app -->
+		<transition-group name="fade-app" tag="div" class="row mt-3">
+<!-- $root = vue root -->
+			<div class="col-12 mt-3 h6" :key="'title'">
+				You may be interested in
+			</div>
+			<div class="col-3 col-sm-4 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in inforApp.hotTrens" :key="equalKey(key)" @click="goto(key, app)">
+				<img class="img-fluid icon-sm border" :src="app.icon" style="border-radius: 10px"/>
+				<div class="limit-line-1 small-80 text-bold mt-1">
+					{{ app.name }}
+				</div>
+			</div>
+		</transition-group>
+			
+		<div class="row py-1 download fixed-bottom bg-light">
+			<div class="col-12">
+				<div class="input-group input-group-sm">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Version</span>
+					</div>
+					<select class="form-control custom-select" ref="select-link">
+						<option v-for="(link, ver) in getJSON(inforApp.app.versions)"
+:value="link"> {{ ver }} </option>
+					</select>
+					<div class="input-group-append">
+						<button class="btn btn-primary rounded-0" @click="open($refs['select-link'].value)"> Download </button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<script src="/js/my.js" async></script>
+		<script src="/js/libmy.js" async></script>
+		<script src="/js/vue.min.js" async></script>
+		<script src="/js/search.params.min.js" async></script>
+		<link rel=stylesheet href="/css/limit-line.min.css"></link>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.8.0/marked.min.js" async></script>
+		<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js" async></script>
+		<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js" async></script>
+		<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js" async></script>
+		<script src="script.min.js" async></script>
+	</body>
+</html>

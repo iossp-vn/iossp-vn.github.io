@@ -189,6 +189,8 @@
 			</transition-group>
 			
 <div style="
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -209,6 +211,7 @@
     border-left: none;
     vertical-align: middle;
     box-sizing: border-box;
+    width: 60%;
   ">
     <option v-for="(link, ver) in JSON.parse('{' + decodeURIComponent(atob(inforApp.app.versions)) + '}')" :value="link">
       {{ ver }}
@@ -217,13 +220,12 @@
   <button @click="open($refs['select-link'].value)" style="
     display: inline-block;
     padding: 6px 16px;
-    margin-left: 8px;
     font-size: 14px;
     background: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
     vertical-align: middle;
+    width: 40%;
   ">
     Download
   </button>

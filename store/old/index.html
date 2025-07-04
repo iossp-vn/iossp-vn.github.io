@@ -189,70 +189,60 @@
 			</transition-group>
 			
 <div style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   background: #f8f9fa;
+  display: block;
+  z-index: 9999;
   border-top: 1px solid #ccc;
-  display: table;
-  table-layout: fixed;
+  padding: 6px 8px;
+  box-sizing: border-box;
 ">
-  <div style="display: table-row;">
-    <!-- Label "Version" -->
-    <div style="
-      display: table-cell;
-      width: 30%;
-      padding: 6px 8px;
-      border: 1px solid #ccc;
-      background: #e9ecef;
-      font-size: 14px;
-      vertical-align: middle;
-      text-align: center;
-      border-right: none;
-    ">
-      Version
-    </div>
-
-    <!-- Select dropdown -->
-    <div style="
-      display: table-cell;
-      width: 40%;
-      border: 1px solid #ccc;
-      border-left: none;
-      font-size: 14px;
-    ">
-      <select ref="select-link" style="
-        width: 100%;
-        height: 100%;
-        border: none;
-        padding: 6px;
-        font-size: 14px;
-        box-sizing: border-box;
-      ">
-        <option v-for="(link, ver) in JSON.parse('{' + decodeURIComponent(atob(inforApp.app.versions)) + '}')" :value="link">
-          {{ ver }}
-        </option>
-      </select>
-    </div>
-
-    <!-- Button Download -->
-    <div style="
-      display: table-cell;
-      width: 30%;
-      padding: 0;
-    ">
-      <button @click="open($refs['select-link'].value)" style="
-        width: 100%;
-        height: 100%;
-        background: #007bff;
-        color: white;
-        border: none;
-        font-size: 14px;
-        padding: 6px 0;
-        box-sizing: border-box;
-      ">
-        Download
-      </button>
-    </div>
+  <div style="
+    display: inline-block;
+    background: #e9ecef;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    vertical-align: middle;
+  ">
+    Version
   </div>
+  <select ref="select-link" style="
+    display: inline-block;
+    width: 40%;
+    min-width: 100px;
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-left: none;
+    vertical-align: middle;
+    border-radius: 0 4px 4px 0;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+  ">
+    <option v-for="(link, ver) in JSON.parse('{' + decodeURIComponent(atob(inforApp.app.versions)) + '}')" :value="link">
+      {{ ver }}
+    </option>
+  </select>
+  <button @click="open($refs['select-link'].value)" style="
+    display: inline-block;
+    padding: 6px 16px;
+    margin-left: 8px;
+    font-size: 14px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    vertical-align: middle;
+  ">
+    Download
+  </button>
 </div>
 
 		</section>

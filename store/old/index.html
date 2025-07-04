@@ -197,21 +197,8 @@
   display: block;
   z-index: 9999;
   border-top: 1px solid #ccc;
-  padding: 6px 8px;
   box-sizing: border-box;
 ">
-  <div style="
-    display: inline-block;
-    background: #e9ecef;
-    padding: 6px 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-right: none;
-    border-radius: 4px 0 0 4px;
-    vertical-align: middle;
-  ">
-    Version
-  </div>
   <select ref="select-link" style="
     display: inline-block;
     width: 40%;
@@ -221,10 +208,7 @@
     border: 1px solid #ccc;
     border-left: none;
     vertical-align: middle;
-    border-radius: 0 4px 4px 0;
     box-sizing: border-box;
-    appearance: none;
-    -webkit-appearance: none;
   ">
     <option v-for="(link, ver) in JSON.parse('{' + decodeURIComponent(atob(inforApp.app.versions)) + '}')" :value="link">
       {{ ver }}

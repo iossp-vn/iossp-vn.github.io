@@ -5,7 +5,7 @@ const DeleteApp = {
 		<div class="col-12 col-md-6 col-lg-4">
 			<div class="custom-control custom-checkbox">
 				<input type="checkbox" class="custom-control-input" id="checkbox1" v-model="hash">
-				<label class="custom-control-label" for="checkbox1">Chế độ xung băm</label>
+				<label class="custom-control-label" for="checkbox1" style="color:red">Chế độ xung băm</label>
 			</div>
 		
 			<div class="input-group input-group-sm mt-3">

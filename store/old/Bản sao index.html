@@ -188,70 +188,34 @@
 				</div>
 			</transition-group>
 			
-<div style="
-  width: 100%;
-  background: #f8f9fa;
-  border-top: 1px solid #ccc;
-  display: table;
-  table-layout: fixed;
-">
-  <div style="display: table-row;">
-    <!-- Label "Version" -->
-    <div style="
-      display: table-cell;
-      width: 30%;
-      padding: 6px 8px;
-      border: 1px solid #ccc;
-      background: #e9ecef;
+<div class="row py-2 download fixed-bottom bg-light" style="text-align: center;">
+  <div class="col-6" style="padding-right: 0.25rem;">
+    <select style="
+      width: 100%;
+      padding: 6px;
       font-size: 14px;
-      vertical-align: middle;
-      text-align: center;
-      border-right: none;
-    ">
-      Version
-    </div>
-
-    <!-- Select dropdown -->
-    <div style="
-      display: table-cell;
-      width: 40%;
-      border: 1px solid #ccc;
-      border-left: none;
-      font-size: 14px;
-    ">
-      <select ref="select-link" style="
+      border-radius: 4px;
+    " ref="select-link">
+      <option v-for="(link, ver) in JSON.parse('{' + decodeURIComponent(atob(inforApp.app.versions)) + '}')" :value="link">
+        {{ ver }}
+      </option>
+    </select>
+  </div>
+  <div class="col-6" style="padding-left: 0.25rem;">
+    <button
+      style="
         width: 100%;
-        height: 100%;
-        border: none;
         padding: 6px;
         font-size: 14px;
-        box-sizing: border-box;
-      ">
-        <option v-for="(link, ver) in JSON.parse('{' + decodeURIComponent(atob(inforApp.app.versions)) + '}')" :value="link">
-          {{ ver }}
-        </option>
-      </select>
-    </div>
-
-    <!-- Button Download -->
-    <div style="
-      display: table-cell;
-      width: 30%;
-      padding: 0;
-    ">
-      <button @click="open($refs['select-link'].value)" style="
-        width: 100%;
-        height: 100%;
-        background: #007bff;
+        border-radius: 4px;
+        background: #2196F3;
         color: white;
         border: none;
-        font-size: 14px;
-        padding: 6px 0;
-        box-sizing: border-box;
-      ">
-        Download
-      </button>
-    </div>
+      "
+      @click="open($refs['select-link'].value)"
+    >
+      Download
+    </button>
   </div>
 </div>
 

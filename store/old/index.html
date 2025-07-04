@@ -233,7 +233,7 @@
 	<!-- template preview -->
 	<template id = "preview-app">
 		<transition-group name="fade-app" tag="div" class="row">
-			<div class="col-12 row mt-3 icon-download" v-for="(app, key) in appPreview" :key="equalKey(key)" @click="$root.goto(key, app)">
+			<div class="col-12 col-lg-6 col-xl-4 row mt-3 icon-download" v-for="(app, key) in appPreview" :key="equalKey(key)" @click="$root.goto(key, app)">
 
 <!--
 	equalKey function nothing
@@ -274,12 +274,12 @@
 			</div>
 			<div class="row">
 				<div class="col-12 mt-3 h5 text-bold">
-					 Top Download
+					Top Download
 				</div>
 			</div>
 			<transition-group name="fade-app" tag="div" class="row">
 <!-- $root = vue root -->
-				<div class="col-6 col-sm-6 col-md-3 col-lg-3 mb-3 text-center" v-for="(app, key) in appsHot" :key="equalKey(key)" @click="$root.goto(key, app)">
+				<div class="col-3 col-sm-4 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in appsHot" :key="equalKey(key)" @click="$root.goto(key, app)">
 					<img class="img-fluid icon-sm border" :src="app.icon" style="border-radius: 10px"/>
 					<div class="limit-line-1 small-80 text-bold mt-1">
 						{{ app.name }}
@@ -311,28 +311,6 @@
 }
 body {
 	padding-bottom: 3em;
-}
-
-@media screen and (max-device-width: 768px) {
-  .app-content .row {
-    font-size: 0 !important; /* chống spacing inline-block */
-  }
-
-  .app-content .row > [class^="col-"] {
-    display: inline-block !important;
-    width: 48% !important;
-    margin: 1% !important;
-    vertical-align: top;
-    font-size: 14px !important; /* khôi phục text bên trong */
-  }
-
-  /* Giữ nguyên layout cho toolbar (4 icon ngang) */
-  .toolbar .row > [class^="col-"] {
-    display: block !important;
-    float: left !important;
-    width: 25% !important;
-    text-align: center;
-  }
 }
 
 .small-80 {

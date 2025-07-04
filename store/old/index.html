@@ -277,15 +277,34 @@
 					Top Download
 				</div>
 			</div>
-			<transition-group name="fade-app" tag="div" class="row">
-<!-- $root = vue root -->
-				<div class="col-3 col-sm-4 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in appsHot" :key="equalKey(key)" @click="$root.goto(key, app)">
-					<img class="img-fluid icon-sm border" :src="app.icon" style="border-radius: 10px"/>
-					<div class="limit-line-1 small-80 text-bold mt-1">
-						{{ app.name }}
-					</div>
-				</div>
-			</transition-group>
+			<div style="
+  font-size: 0;
+  text-align: center;
+  margin-bottom: 1rem;
+">
+  <div
+    v-for="(app, key) in appsHot"
+    :key="equalKey(key)"
+    @click="$root.goto(key, app)"
+    style="
+      display: inline-block;
+      width: 25%;
+      font-size: 14px;
+      vertical-align: top;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    "
+  >
+    <img
+      class="img-fluid icon-sm border"
+      :src="app.icon"
+      style="border-radius: 10px"
+    />
+    <div class="limit-line-1 small-80 text-bold mt-1">
+      {{ app.name }}
+    </div>
+  </div>
+</div>
 			
 			<!-- New App show 20 -->
 			<preview-app :app-preview="appPreview">

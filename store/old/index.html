@@ -277,7 +277,7 @@
 					Top Download
 				</div>
 			</div>
-			<transition-group name="fade-app" tag="div" class="row row-top-download">
+			<transition-group name="fade-app" tag="div" class="row">
 <!-- $root = vue root -->
 				<div class="col-3 col-sm-4 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in appsHot" :key="equalKey(key)" @click="$root.goto(key, app)">
 					<img class="img-fluid icon-sm border" :src="app.icon" style="border-radius: 10px"/>
@@ -315,7 +315,7 @@ body {
 
 @media screen and (max-device-width: 768px) {
   .app-content .row {
-    font-size: 0 !important;
+    font-size: 0 !important; /* chống spacing inline-block */
   }
 
   .app-content .row > [class^="col-"] {
@@ -323,25 +323,17 @@ body {
     width: 48% !important;
     margin: 1% !important;
     vertical-align: top;
-    font-size: 14px !important;
+    font-size: 14px !important; /* khôi phục text bên trong */
   }
 
+  /* Giữ nguyên layout cho toolbar (4 icon ngang) */
   .toolbar .row > [class^="col-"] {
     display: block !important;
     float: left !important;
     width: 25% !important;
     text-align: center;
   }
-
-  /* ✅ Sửa đúng tại đây */
-  .row-top-download > div {
-    display: inline-block !important;
-    width: 24% !important;
-    margin: 0.5% !important;
-    vertical-align: top !important;
-  }
 }
-
 
 .small-80 {
 	font-size: 70% !important;

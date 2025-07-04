@@ -272,11 +272,13 @@
 </carousel-3d>
 				</transition>
 			</div>
+			<div class="row">
+				<div class="col-12 mt-3 h5 text-bold">
+					<img src="http://iossp-vn.github.io/store/svgs/hot.svg" /> Top Download
+				</div>
+			</div>
 			<transition-group name="fade-app" tag="div" class="row">
 <!-- $root = vue root -->
-				<div class="col-12 mt-3 h5 text-bold" :key="'title'">
-					<img src="/store/svgs/hot.svg" /> Top Download
-				</div>
 				<div class="col-3 col-sm-4 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in appsHot" :key="equalKey(key)" @click="$root.goto(key, app)">
 					<img class="img-fluid icon-sm border" :src="app.icon" style="border-radius: 10px"/>
 					<div class="limit-line-1 small-80 text-bold mt-1">

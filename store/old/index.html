@@ -233,24 +233,20 @@
 	<!-- template preview -->
 	<template id = "preview-app">
 		<transition-group name="fade-app" tag="div" class="row">
-			<div class="col-12 col-lg-6 col-xl-4 row mt-3 icon-download" v-for="(app, key) in appPreview" :key="equalKey(key)" @click="$root.goto(key, app)">
+<div class="col-12 col-lg-6 col-xl-4 mt-3">
+  <div class="row icon-download" @click="$root.goto(key, app)">
+    <div class="col-3">
+      <img class="icon-sm border" :src="app.icon" />
+    </div>
+    <div class="col py-2 ml-2">
+      <div class="text-bold small limit-line-2">
+        <b>{{ app.name }}</b>
+      </div>
+      <span class="small-80 mt-3 text-normal"> {{ sizeof(app.size) }} </span>
+    </div>
+  </div>
+</div>
 
-<!--
-	equalKey function nothing
-	equalKey = e => e + ""
--->
-
-				<div class="col-3">
-					<img class="icon-sm border" :src="app.icon" />
-				</div>
-	<!-- icon !important -->
-				<div class="col py-2 ml-2">
-					<div class="text-bold small limit-line-2">
-						<b>{{ app.name }}</b>
-					</div>
-					<span class="small-80 mt-3 text-normal"> {{ sizeof(app.size) }} </span>
-				</div>
-			</div>
 		</transition-group>
 	</template>
 	

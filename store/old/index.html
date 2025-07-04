@@ -256,7 +256,7 @@
 	
 	<!-- template page-spa -->
 	<template id = "page-spa">
-		<section class="container">
+		<section class="container app-content">
 			<div class="row">
 				<transition tag="div" name="bouncy-app" class="col-12">
 <carousel-3d :autoplay=true 
@@ -312,10 +312,24 @@ body {
 }
 
 @media screen and (max-device-width: 768px) {
-  .row > [class^="col-"] {
-    display: block;
-    width: 100% !important;
-    margin-bottom: 1em;
+  .app-content .row {
+    font-size: 0 !important; /* chống spacing inline-block */
+  }
+
+  .app-content .row > [class^="col-"] {
+    display: inline-block !important;
+    width: 48% !important;
+    margin: 1% !important;
+    vertical-align: top;
+    font-size: 14px !important; /* khôi phục text bên trong */
+  }
+
+  /* Giữ nguyên layout cho toolbar (4 icon ngang) */
+  .toolbar .row > [class^="col-"] {
+    display: block !important;
+    float: left !important;
+    width: 25% !important;
+    text-align: center;
   }
 }
 

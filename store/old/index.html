@@ -79,7 +79,7 @@
 		</page-spa>
 		
 		<!-- tab search -->
-		<section class="container search-content" v-else-if="tabSelect == 'search'">
+		<section class="container" v-else-if="tabSelect == 'search'">
 			<!-- input -->
 			<div class="row mt-3">
 				<div class="col-12">
@@ -274,7 +274,7 @@
 			</div>
 			<div class="row">
 				<div class="col-12 mt-3 h5 text-bold">
-					<img src="http://iossp-vn.github.io/store/svgs/hot.svg" /> Top Download
+					<img src="/store/svgs/hot.svg" /> Top Download
 				</div>
 			</div>
 			<transition-group name="fade-app" tag="div" class="row">
@@ -333,17 +333,13 @@ body {
     width: 25% !important;
     text-align: center;
   }
-}
-
-@media screen and (max-device-width: 768px) {
-  .search-content .icon-download {
+  .icon-download {
     display: block !important;
     width: 100% !important;
     margin-bottom: 1em;
   }
-
-  .search-content .icon-download > .col-3,
-  .search-content .icon-download > .col {
+  .icon-download > .col-3,
+  .icon-download > .col {
     display: inline-block !important;
     vertical-align: top;
     width: auto !important;

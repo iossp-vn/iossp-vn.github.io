@@ -50,7 +50,7 @@
 </script>
 	</head>
 	<body>
-	<div id="app" style="display: block">
+	<div id="app">
 		<!-- tab hot -->
 		<page-spa :swipers="hot.swipers"
 			:apps-hot=hot.appHot
@@ -117,7 +117,7 @@
 		</section>
 		
 		<!-- information app -->
-		<section class="container" v-else-if="tabSelect == 'inforApp'">
+		<section class="container" style="display: block" v-else-if="tabSelect == 'inforApp'">
 			<div class="row">
 				<div class="col-12 my-2" @click="back()">
 					&lt; Back

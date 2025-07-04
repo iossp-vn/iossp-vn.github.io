@@ -277,7 +277,7 @@
 					Top Download
 				</div>
 			</div>
-			<transition-group name="fade-app" tag="div" class="row row-top-download">
+			<transition-group name="fade-app" tag="div" class="row">
 <!-- $root = vue root -->
 				<div class="col-3 col-sm-4 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in appsHot" :key="equalKey(key)" @click="$root.goto(key, app)">
 					<img class="img-fluid icon-sm border" :src="app.icon" style="border-radius: 10px"/>
@@ -318,7 +318,7 @@ body {
     font-size: 0 !important; /* chống spacing inline-block */
   }
 
-	.app-content .row:not(.row-top-download) > [class^="col-"] {
+  .app-content .row > [class^="col-"] {
     display: inline-block !important;
     width: 48% !important;
     margin: 1% !important;
@@ -333,12 +333,6 @@ body {
     width: 25% !important;
     text-align: center;
   }
-  .row-top-download > div {
-  float: left !important;
-  width: 25% !important;
-  margin: 0 !important;
-  text-align: center;
-}
 }
 
 .small-80 {

@@ -233,7 +233,7 @@
 	<!-- template preview -->
 	<template id = "preview-app">
 		<transition-group name="fade-app" tag="div" class="row">
-			<div class="col-12 col-lg-6 col-xl-4 row mt-3 icon-download" v-for="(app, key) in appPreview" :key="equalKey(key)" @click="$root.goto(key, app)">
+			<div class="col-12 row mt-3 icon-download" v-for="(app, key) in appPreview" :key="equalKey(key)" @click="$root.goto(key, app)">
 
 <!--
 	equalKey function nothing
@@ -274,7 +274,7 @@
 			</div>
 			<div class="row">
 				<div class="col-12 mt-3 h5 text-bold">
-					<img src="/store/svgs/hot.svg" /> Top Download
+					 Top Download
 				</div>
 			</div>
 			<transition-group name="fade-app" tag="div" class="row">
@@ -668,31 +668,6 @@ small {
 
 small {
 	font-size: 60% !important;
-}
-
-@media screen and (max-device-width: 768px) {
-  /* Chỉ sửa phần kết quả tìm kiếm */
-  .row.icon-download {
-    display: table !important;
-    width: 100%;
-    margin-bottom: 1em;
-  }
-
-  .row.icon-download > .col-3,
-  .row.icon-download > .col {
-    display: table-cell !important;
-    vertical-align: top;
-    float: none !important;
-    width: auto !important;
-  }
-
-  .row.icon-download > .col-3 {
-    width: 30% !important;
-  }
-
-  .row.icon-download > .col {
-    width: 70% !important;
-  }
 }
 
 </style>

@@ -208,7 +208,7 @@
 		
 		<!-- toolbar -->
 		
-		<section class="container fixed-bottom bg-light py-1 toolbar" v-if="tabSelect != 'inforApp'">
+		<section style="display: block !important;" class="container fixed-bottom bg-light py-1 toolbar" v-if="tabSelect != 'inforApp'">
 			<div class="row">
 				<div class="col-3 text-center line-height-0" @click="switchT('hot')">
 						<img :src="'/store/svgs/home' + (tabSelect == 'hot' ? '-selected.svg' : '.svg')" /><br>
@@ -232,31 +232,26 @@
 	
 	<!-- template preview -->
 	<template id = "preview-app">
-		<transition-group name="fade-app" tag="div" class="row">
-			<div class="col-12 col-lg-6 col-xl-4 row mt-3 icon-download" v-for="(app, key) in appPreview" :key="equalKey(key)" @click="$root.goto(key, app)">
-
-<!--
-	equalKey function nothing
-	equalKey = e => e + ""
--->
-
-				<div class="col-3">
-					<img class="icon-sm border" :src="app.icon" />
-				</div>
-	<!-- icon !important -->
-				<div class="col py-2 ml-2">
-					<div class="text-bold small limit-line-2">
-						<b>{{ app.name }}</b>
-					</div>
-					<span class="small-80 mt-3 text-normal"> {{ sizeof(app.size) }} </span>
-				</div>
-			</div>
-		</transition-group>
-	</template>
+<transition-group name="fade-app" tag="div" class="row">
+  <div class="col-12 col-lg-6 col-xl-4 mt-3" v-for="(app, key) in appPreview" :key="equalKey(key)">
+    <div class="row icon-download" @click="$root.goto(key, app)">
+      <div class="col-3">
+        <img class="icon-sm border" :src="app.icon" />
+      </div>
+      <div class="col py-2 ml-2">
+        <div class="text-bold small limit-line-2">
+          <b>{{ app.name }}</b>
+        </div>
+        <span class="small-80 mt-3 text-normal"> {{ sizeof(app.size) }} </span>
+      </div>
+    </div>
+  </div>
+</transition-group>
+</template>
 	
 	<!-- template page-spa -->
 	<template id = "page-spa">
-		<section class="container app-content">
+		<section class="container">
 			<div class="row">
 				<transition tag="div" name="bouncy-app" class="col-12">
 <carousel-3d :autoplay=true 
@@ -272,13 +267,11 @@
 </carousel-3d>
 				</transition>
 			</div>
-			<div class="row">
-				<div class="col-12 mt-3 h5 text-bold">
-					<img src="/store/svgs/hot.svg" /> Top Download
-				</div>
-			</div>
 			<transition-group name="fade-app" tag="div" class="row">
 <!-- $root = vue root -->
+				<div class="col-12 mt-3 h5 text-bold" :key="'title'">
+					<img src="/store/svgs/hot.svg" /> Top Download
+				</div>
 				<div class="col-3 col-sm-4 col-lg-2 col-xl-1 mb-3 text-center" v-for="(app, key) in appsHot" :key="equalKey(key)" @click="$root.goto(key, app)">
 					<img class="img-fluid icon-sm border" :src="app.icon" style="border-radius: 10px"/>
 					<div class="limit-line-1 small-80 text-bold mt-1">
@@ -314,24 +307,10 @@ body {
 }
 
 @media screen and (max-device-width: 768px) {
-  .app-content .row {
-    font-size: 0 !important; /* chống spacing inline-block */
-  }
-
-  .app-content .row > [class^="col-"] {
-    display: inline-block !important;
-    width: 48% !important;
-    margin: 1% !important;
-    vertical-align: top;
-    font-size: 14px !important; /* khôi phục text bên trong */
-  }
-
-  /* Giữ nguyên layout cho toolbar (4 icon ngang) */
-  .toolbar .row > [class^="col-"] {
-    display: block !important;
-    float: left !important;
-    width: 25% !important;
-    text-align: center;
+  .row > [class^="col-"] {
+    display: inline-block;
+    width: 100% !important;
+    margin-bottom: 1em;
   }
 }
 
@@ -669,32 +648,6 @@ small {
 small {
 	font-size: 60% !important;
 }
-
-@media screen and (max-device-width: 768px) {
-  /* Chỉ sửa phần kết quả tìm kiếm */
-  .row.icon-download {
-    display: table !important;
-    width: 100%;
-    margin-bottom: 1em;
-  }
-
-  .row.icon-download > .col-3,
-  .row.icon-download > .col {
-    display: table-cell !important;
-    vertical-align: top;
-    float: none !important;
-    width: auto !important;
-  }
-
-  .row.icon-download > .col-3 {
-    width: 30% !important;
-  }
-
-  .row.icon-download > .col {
-    width: 70% !important;
-  }
-}
-
 </style>
 <script>
 

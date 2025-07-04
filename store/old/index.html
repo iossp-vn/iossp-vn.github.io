@@ -334,15 +334,25 @@ body {
     text-align: center;
   }
   .icon-download {
-    display: block !important;
-    width: 100% !important;
+    display: table !important;
+    width: 100%;
     margin-bottom: 1em;
   }
+
   .icon-download > .col-3,
   .icon-download > .col {
-    display: inline-block !important;
+    display: table-cell !important;
     vertical-align: top;
+    float: none !important;
     width: auto !important;
+  }
+
+  .icon-download > .col-3 {
+    width: 30% !important;
+  }
+
+  .icon-download > .col {
+    width: 70% !important;
   }
 }
 

@@ -208,7 +208,7 @@
 		
 		<!-- toolbar -->
 		
-		<section class="container fixed-bottom bg-light py-1 toolbar" v-if="tabSelect != 'inforApp'">
+		<section style="display: block !important;" class="container fixed-bottom bg-light py-1 toolbar" v-if="tabSelect != 'inforApp'">
 			<div class="row">
 				<div class="col-3 text-center line-height-0" @click="switchT('hot')">
 						<img :src="'/store/svgs/home' + (tabSelect == 'hot' ? '-selected.svg' : '.svg')" /><br>
@@ -312,7 +312,7 @@ body {
 }
 
 @media screen and (max-device-width: 768px) {
-  .app-content .row > [class^="col-"] {
+  .row > [class^="col-"] {
     display: inline-block;
     width: 100% !important;
     margin-bottom: 1em;

@@ -333,27 +333,6 @@ body {
     width: 25% !important;
     text-align: center;
   }
-  .icon-download {
-    display: table !important;
-    width: 100%;
-    margin-bottom: 1em;
-  }
-
-  .icon-download > .col-3,
-  .icon-download > .col {
-    display: table-cell !important;
-    vertical-align: top;
-    float: none !important;
-    width: auto !important;
-  }
-
-  .icon-download > .col-3 {
-    width: 30% !important;
-  }
-
-  .icon-download > .col {
-    width: 70% !important;
-  }
 }
 
 .small-80 {
@@ -690,6 +669,32 @@ small {
 small {
 	font-size: 60% !important;
 }
+
+@media screen and (max-device-width: 768px) {
+  /* Chỉ sửa phần kết quả tìm kiếm */
+  .row.icon-download {
+    display: table !important;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .row.icon-download > .col-3,
+  .row.icon-download > .col {
+    display: table-cell !important;
+    vertical-align: top;
+    float: none !important;
+    width: auto !important;
+  }
+
+  .row.icon-download > .col-3 {
+    width: 30% !important;
+  }
+
+  .row.icon-download > .col {
+    width: 70% !important;
+  }
+}
+
 </style>
 <script>
 

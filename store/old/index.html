@@ -188,22 +188,37 @@
 				</div>
 			</transition-group>
 			
-			<div class="row py-1 download fixed-bottom bg-light">
-				<div class="col-12">
-					<div class="input-group input-group-sm">
-						<div class="input-group-prepend">
-							<span class="input-group-text">Version</span>
-						</div>
-						<select class="form-control custom-select" ref="select-link">
-							<option v-for="(link, ver) in JSON.parse('{' + decodeURIComponent(atob(inforApp.app.versions)) + '}')"
-:value="link"> {{ ver }} </option>
-						</select>
-						<div class="input-group-append">
-							<button class="btn btn-primary rounded-0" @click="open($refs['select-link'].value)"> Download </button>
-						</div>
-					</div>
-				</div>
-			</div>
+<div class="row py-2 download fixed-bottom bg-light" style="text-align: center;">
+  <div class="col-6" style="padding-right: 0.25rem;">
+    <select style="
+      width: 100%;
+      padding: 6px;
+      font-size: 14px;
+      border-radius: 4px;
+    " ref="select-link">
+      <option v-for="(link, ver) in JSON.parse('{' + decodeURIComponent(atob(inforApp.app.versions)) + '}')" :value="link">
+        {{ ver }}
+      </option>
+    </select>
+  </div>
+  <div class="col-6" style="padding-left: 0.25rem;">
+    <button
+      style="
+        width: 100%;
+        padding: 6px;
+        font-size: 14px;
+        border-radius: 4px;
+        background: #2196F3;
+        color: white;
+        border: none;
+      "
+      @click="open($refs['select-link'].value)"
+    >
+      Download
+    </button>
+  </div>
+</div>
+
 		</section>
 		
 		<!-- toolbar -->

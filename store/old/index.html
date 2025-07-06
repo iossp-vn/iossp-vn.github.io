@@ -292,14 +292,14 @@
 			<div class="row">
 				<transition tag="div" name="bouncy-app" class="col-12">
 <carousel-3d :autoplay=true 
-	:autoplay-timeout=3000 
+	:autoplay-timeout=1000 
 	:border=0
 	:autoplay-hover-pause=true
 	:height=120
 	:width="240"
 	v-if="swipers.length">
 	<slide v-for="(slide, i) in swipers" :index="i" :key="slide + i">
-	  <img :src=slide style="border-radius:15px"/>
+	  <img :src=slide style="border-radius:15px ; border:groove;"/>
 	</slide>
 </carousel-3d>
 				</transition>

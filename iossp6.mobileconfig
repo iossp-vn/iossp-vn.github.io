@@ -5,7 +5,7 @@
 	<key>ConsentText</key>
 	<dict>
 		<key>default</key>
-		<string>Cảm ơn bạn đã cài đặt chợ ứng dụng LegacyAppStore từ iOSSupport! Bây giờ bạn có thể mở nó từ màn hình chính của bạn. Nếu có bất kỳ thắc mắc, xin vui lòng liên hệ với tôi trên Facebook: https://facebook.com/mottao.00/.</string>
+		<string>Cảm ơn bạn đã cài đặt chợ ứng dụng LegacyStore từ iOSSupport! Bây giờ bạn có thể mở nó từ màn hình chính của bạn. Nếu có bất kỳ thắc mắc, xin vui lòng liên hệ với tôi trên Facebook: https://facebook.com/mottao.00/.</string>
 	</dict>
 	<key>PayloadContent</key>
 	<array>
@@ -20,11 +20,11 @@
 			<key>IsRemovable</key>
 			<false/>
 			<key>Label</key>
-			<string>Legacy</string>
+			<string>LegacyStore</string>
 			<key>PayloadDescription</key>
-			<string>Định cấu hình cài đặt chợ ứng dụng LegacyAppStore.</string>
+			<string>Định cấu hình cài đặt chợ ứng dụng LegacyStore.</string>
 			<key>PayloadDisplayName</key>
-			<string>LegacyAppStore</string>
+			<string>LegacyStore</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.webClip.managed.mobileconfig</string>
 			<key>PayloadType</key>
@@ -40,11 +40,11 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Một sản phẩm của iOSSupport: LegacyAppStore - Cửa hàng ứng dụng dành riêng cho iOS/iDevies cũ, hỗ trợ cả thiết bị JailBreak/Non-JailBreak.</string>
+	<string>Một sản phẩm của iOSSupport: LegacyStore - Cửa hàng ứng dụng dành riêng cho iOS/iDevies cũ, hỗ trợ cả thiết bị JailBreak/Non-JailBreak.</string>
 	<key>PayloadDisplayName</key>
-	<string>iOSSupport - LegacyAppStore</string>
+	<string>iOSSupport - LegacyStore</string>
 	<key>PayloadIdentifier</key>
-	<string>vn.iossp.legacy-appstore</string>
+	<string>vn.iossp.legacy-store</string>
 	<key>PayloadOrganization</key>
 	<string>Mọt</string>
 	<key>PayloadRemovalDisallowed</key>

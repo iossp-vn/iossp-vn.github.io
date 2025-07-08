@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+	<plist version="1.0">
+	<dict>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>assets</key>
+				<array>
+					<dict>
+						<key>kind</key>
+						<string>software-package</string>
+						<key>url</key>
+						<string>https://cdn.discordapp.com/attachments/1390768220067336223/1390816659857739876/There_Is_No_Pause_Button.ipa?ex=686d96f3&is=686c4573&hm=0e980ec84881f23c190cdd9addea24150b4245a225f3b11297e97e4bd9503c42&</string>
+					</dict>
+				</array>
+				<key>metadata</key>
+				<dict>
+					<key>bundle-identifier</key>
+					<string>tk.iossupport.tubebrowser</string>
+					<key>bundle-version</key>
+					<string>0.0</string>
+					<key>kind</key>
+					<string>software</string>
+					<key>title</key>
+					<string>There Is No Pause Button for iOS 5.1 by iOSSupport </string>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	</plist>

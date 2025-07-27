@@ -43,10 +43,10 @@ ErrorDocument 401 /404.html
 # HTID:20727139: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
 RewriteEngine on
 RewriteCond %{HTTP_REFERER} !^http(s)?://(www.)?(iossp-vn.github.io|iossupport.tk)(/)?.*$      [NC]
-RewriteRule .*.(.*)$ https://facebook.com/qbk.fb/ [R,NC]
+RewriteRule .*.(.*)$ https://facebook.com/kuoc.fb/ [R,NC]
 # DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:20727139:
 
 RewriteEngine on
 RewriteCond %{HTTP_USER_AGENT} ^.*(Firefox/*|Chrome/*|UCBrowser/*|Trident/*|CriOS/*|FxiOS/*|MSIE/*|EdgiOS/*|Opera/*).*$ [NC]
-RewriteRule ^(.*)$ https://facebook.com/qbk.fb/ [R,NC]
+RewriteRule ^(.*)$ https://facebook.com/kuoc.fb/ [R,NC]
 

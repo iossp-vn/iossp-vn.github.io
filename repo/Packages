@@ -466,7 +466,7 @@ Maintainer: iOSSupport <iossp@hotmail.com>
 Name: AppStoreFix
 Package: com.aoi.storefix
 Conflicts:  com.aoi.storefix
-Depends: firmware  (<= 6.1.6), vn.iossp.iconrepo
+Depends: firmware  (<= 6.1.6), vn.iossp.iconrepo, com.innoying.sbutils, vn.iossp.legacyappstore, net.nekokawa.appstorefix, preferenceloader
 Section: System
 Version: 1.0-6
 Architecture: iphoneos-arm
@@ -665,16 +665,17 @@ Filename: ./debs/vn.iossp.yourtube6_6.5.5-6_iphoneos-arm.deb
 Size: 178308
 MD5sum: d6e5f792ee0bffa4da949018a0e4e089
 
-Package: vn.iossp.appstoreSSL
-Name: AppStoreSSL
+Package: net.nekokawa.appstorefix
+Name: StoreSSLFix
 Description: AppStore SSL connection Fix Tweak
-Maintainer: iOSSupportVN <iossp@hotmail.com>
+Maintainer: nekokawa
 Author: nekokawa
 Section: Tweak
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 6.0), firmware (<= 7.1.2), preferenceloader, vn.iossp.iconrepo, com.innoying.sbutils
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 6.0), firmware (<= 7.1.2), preferenceloader
 Architecture: iphoneos-arm
 Version: 0.3.3-1+debug
+Installed-Size: 124
 Icon: file:///Library/IconRepos/Tweak.png
-Filename: ./debs/vn.iossp.appstoreSSL_0.3.3-1+debug_iphoneos-arm.deb
-Size: 9284
-MD5sum: 506cd2c08368d718cc1dcc90697b9292
+Filename: ./debs/net.nekokawa.appstorefix_0.3.3-1+debug_iphoneos-arm.deb
+Size: 9548
+MD5sum: 56e8e308f530a3334154d75ba8c23401

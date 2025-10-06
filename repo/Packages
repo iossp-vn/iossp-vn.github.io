@@ -461,6 +461,21 @@ Filename: ./debs/vn.iossp.ncsettings_1.7.1_iphoneos-arm.deb
 Size: 472584
 MD5sum: c745e3e5d06c6043f655d6c667f86ba3
 
+Author: aoi_satou
+Maintainer: iOSSupport <iossp@hotmail.com>
+Name: AppStoreFix
+Package: com.aoi.storefix
+Conflicts:  com.aoi.storefix
+Depends: firmware  (<= 6.1.6), vn.iossp.iconrepo
+Section: System
+Version: 1.0-6
+Architecture: iphoneos-arm
+Description: Fixed an issue where iOS 6 and earlier could not connect to the App Store. (Only the host file is rewritten. A restart may be required after installation.) If you applied the patch in the previous version, you may not be able to log in with your Apple ID, so we recommend initializing it.
+Icon: file:///Library/IconRepos/System.png
+Filename: ./debs/AppStoreFix.deb
+Size: 1270
+MD5sum: fb1224b0f97b71a5040606f5fa0b4b37
+
 Package: vn.iossp.itunesstorex
 Name: iTunesStoreX
 Description: This tweak fixes any storefront. It fixes every app's connection issues with the iTunes Store, as of recent changes made by Apple, this tweak does not allow to download apps.
@@ -649,46 +664,3 @@ Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.yourtube6_6.5.5-6_iphoneos-arm.deb
 Size: 178308
 MD5sum: d6e5f792ee0bffa4da949018a0e4e089
-
-Package: vn.iossp.appstoressl
-Name: AppStoreSSL
-Description: Fix AppStore iOS 6.
-Maintainer: iOSSupportVN
-Author: nekokawa
-Section: Tweak
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 6.0), firmware (<= 7.1.2), preferenceloader, com.innoying.sbutils, vn.iossp.iconrepo
-Architecture: iphoneos-arm
-Version: 0.3.3-1+debug
-Icon: file:///Library/IconRepos/Tweak.png
-Filename: ./debs/vn.iossp.appstoressl_0.3.3-1+debug_iphoneos-arm.deb
-Size: 9260
-MD5sum: cfd38a0300495663e94a6eb7156d5084
-
-Author: satou@aoiblog.jp
-Maintainer: iOSSupportVN
-Name: AppStoreFix
-Package: vn.iossp.storefix
-Conflicts:  com.aoi.storefix
-Depends: firmware  (<= 6.1.6), vn.iossp.appstoressl, vn.iossp.legacyappstore, vn.iossp.iconrepo
-Section: System
-Version: 1.0-7
-Architecture: iphoneos-arm
-Description: Fix AppStore phiên bản mới cho iOS 6, khuyến khích khởi động lại máy sau khi cài đặt.
-Icon: file:///Library/IconRepos/System.png
-Filename: ./debs/vn.iossp.storefix_1.0-7_iphoneos-arm.deb
-Size: 1464
-MD5sum: aa101d76ad028e4e62b1c912110cb2f8
-
-Package: vn.iossp.googlefix
-Name: GoogleFix
-Description: Fixes Google on iOS 6
-Maintainer: iOSSupportVN
-Author: Victor
-Section: Tweak
-Depends: mobilesubstrate (>= 0.9.5000), vn.iossp.iconrepo
-Architecture: iphoneos-arm
-Version: 1.0.2
-Icon: file:///Library/IconRepos/Tweak.png
-Filename: ./debs/vn.iossp.googlefix_1.0.2_iphoneos-arm.deb
-Size: 6216
-MD5sum: 11078996a04862644186d1c31d5f4c4e

@@ -678,3 +678,17 @@ Icon: file:///Library/IconRepos/System.png
 Filename: ./debs/vn.iossp.storefix_1.0-7_iphoneos-arm.deb
 Size: 1464
 MD5sum: aa101d76ad028e4e62b1c912110cb2f8
+
+Package: vn.iossp.googlefix
+Name: GoogleFix
+Description: Fixes Google on iOS 6
+Maintainer: iOSSupportVN
+Author: Victor
+Section: Tweak
+Depends: mobilesubstrate (>= 0.9.5000), vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Version: 1.0.2
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.googlefix_1.0.2_iphoneos-arm.deb
+Size: 6216
+MD5sum: 11078996a04862644186d1c31d5f4c4e

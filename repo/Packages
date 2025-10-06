@@ -668,7 +668,7 @@ MD5sum: d6e5f792ee0bffa4da949018a0e4e089
 Package: vn.iossp.appstoreSSL
 Name: AppStoreSSL
 Description: AppStore SSL connection Fix Tweak
-Maintainer: iOSSupportVN
+Maintainer: iOSSupportVN <iossp@hotmail.com>
 Author: nekokawa
 Section: Tweak
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 6.0), firmware (<= 7.1.2), preferenceloader, vn.iossp.iconrepo, com.innoying.sbutils
@@ -676,5 +676,5 @@ Architecture: iphoneos-arm
 Version: 0.3.3-1+debug
 Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.appstoreSSL_0.3.3-1+debug_iphoneos-arm.deb
-Size: 9272
-MD5sum: e2c00f6d4c25039f0ace74663d0615db
+Size: 9284
+MD5sum: 506cd2c08368d718cc1dcc90697b9292

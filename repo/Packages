@@ -503,20 +503,6 @@ Filename: ./debs/vn.iossp.cydown_6.0.6_iphoneos-arm.deb
 Size: 632282
 MD5sum: 7c33d48a2c9ff64fe1bcd79b45b66634
 
-Package: vn.iossp.legacyappstore
-Name: Legacy AppStore
-Depends: mobilesubstrate, firmware (>= 2.0), vn.iossp.iconrepo
-Architecture: iphoneos-arm
-Description: I'm just a regular everyday normal mothernigger.
-Maintainer: iOSSupport <iossp@hotmail.com>
-Author: Invoxi
-Section: System
-Version: 1.0
-Icon: file:///Library/IconRepos/System.png
-Filename: ./debs/vn.iossp.legacyappstore_1.0_iphoneos-arm.deb
-Size: 7230
-MD5sum: 3c1f5e268f30b17f733643d54e019280
-
 Package: vn.iossp.nativeqr
 Name: NativeQR
 Version: 1.0.0b2
@@ -650,13 +636,27 @@ Filename: ./debs/vn.iossp.yourtube6_6.5.5-6_iphoneos-arm.deb
 Size: 178308
 MD5sum: d6e5f792ee0bffa4da949018a0e4e089
 
+Package: vn.iossp.legacyappstore
+Name: Legacy AppStore
+Depends: mobilesubstrate, firmware (>= 2.0), vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Description: I'm just a regular everyday normal mothernigger.
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Invoxi
+Section: System
+Version: 1.0
+Icon: file:///Library/IconRepos/System.png
+Filename: ./debs/vn.iossp.legacyappstore_1.0_iphoneos-arm.deb
+Size: 7230
+MD5sum: 3c1f5e268f30b17f733643d54e019280
+
 Package: net.nekokawa.appstorefix
 Name: StoreSSLFix
 Description: AppStore SSL connection Fix Tweak
 Maintainer: nekokawa
 Author: nekokawa
 Section: Tweak
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 6.0), firmware (<= 7.1.2), preferenceloader
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 6.0), firmware (<= 7.1.2), preferenceloader, vn.iossp.iconrepo
 Architecture: iphoneos-arm
 Version: 0.3.3-1+debug
 Installed-Size: 124
@@ -665,20 +665,17 @@ Filename: ./debs/net.nekokawa.appstorefix_0.3.3-1+debug_iphoneos-arm.deb
 Size: 9548
 MD5sum: 56e8e308f530a3334154d75ba8c23401
 
-Author: satou@aoiblog.jp
-Maintainer: satou@aoiblog.jp
+Author: aoi_satou
+Maintainer: iOSSupport <iossp@hotmail.com>
 Name: AppStoreFix
 Package: com.aoi.storefix
 Conflicts:  com.aoi.storefix
-Depends: firmware  (<= 6.1.6) ,net.nekokawa.appstorefix ,vn.iossp.legacyappstore ,com.innoying.sbutils
+Depends: firmware  (<= 6.1.6), com.innoying.sbutils, vn.iossp.legacyappstore, net.nekokawa.appstorefix, vn.iossp.iconrepo
 Section: System
 Version: 1.0-7
 Architecture: iphoneos-arm
 Description: Fixed an issue where iOS 6 and earlier could not connect to the App Store. (Only the host file is rewritten. A restart may be required after installation.) If you applied the patch in the previous version, you may not be able to log in with your Apple ID, so we recommend initializing it.
-Depiction: http://aoiblog.jp/appstorefix_history2.html
-dev: aoi_satou
-Tag: purpose::extension
 Icon: file:///Library/IconRepos/System.png
 Filename: ./debs/com.aoi.storefix_1.0-7_iphoneos-arm.deb
-Size: 1656
-MD5sum: 04a31a512a2801166058c638e3dfb6e9
+Size: 1512
+MD5sum: c3182d4dc9df2c63fe4ec44c6a9949b5

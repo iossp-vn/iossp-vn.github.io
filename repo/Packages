@@ -665,6 +665,7 @@ Filename: ./debs/net.nekokawa.appstorefix_0.3.3-1+debug_iphoneos-arm.deb
 Size: 9548
 MD5sum: 56e8e308f530a3334154d75ba8c23401
 
+Charset: UTF-8
 Author: satou@aoiblog.jp
 Maintainer: iOSSupport <iossp@hotmail.com>
 Name: AppStoreFix

@@ -647,8 +647,8 @@ Section: System
 Version: 1.0
 Icon: file:///Library/IconRepos/System.png
 Filename: ./debs/vn.iossp.legacyappstore_1.0_iphoneos-arm.deb
-Size: 5224
-MD5sum: 778fb0eb6f353f3e7eae2d6f4e1642e0
+Size: 7230
+MD5sum: 3c1f5e268f30b17f733643d54e019280
 
 Package: net.nekokawa.appstorefix
 Name: StoreSSLFix

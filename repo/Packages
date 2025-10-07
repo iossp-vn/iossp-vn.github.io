@@ -674,8 +674,8 @@ Depends: net.nekokawa.appstorefix ,vn.iossp.legacyappstore ,com.innoying.sbutils
 Section: System
 Version: 1.0-7
 Architecture: iphoneos-arm
-Description: After installation, your device will go to the activation screen. On iOS 6.0.x, sign in to iCloud there. Special thanks to Aoiblog, InvoxiPlayGames and Nekokawa for this awesome tweak! Sincerely, iOSSupportVN!
+Description: After installation, your device will go to the activation screen. On iOS 6.0.x, sign in to iCloud there. Special thanks to Aoiblog, InvoxiPlayGames and Nekokawa for this awesome tweak! Sincerely, iOS Support VN!
 Icon: file:///Library/IconRepos/System.png
 Filename: ./debs/vn.iossp.appstorefix.deb
-Size: 1560
-MD5sum: 36fbfdbd3e8dc7335963f763448fcca6
+Size: 1468
+MD5sum: 1c410f4e39412217113f7894284be05a

@@ -676,5 +676,5 @@ Architecture: iphoneos-arm
 Description: After installation, your device will go to the activation screen. On iOS 6.0.x, sign in to iCloud there. Special thanks to Aoiblog, InvoxiPlayGames and Nekokawa for this awesome tweak! Sincerely, iOSSupportVN!
 Icon: file:///Library/IconRepos/System.png
 Filename: ./debs/vn.iossp.appstorefix.deb
-Size: 1468
-MD5sum: 2fd3d78bd74ed4faf2620b9d9db7a9b2
+Size: 1560
+MD5sum: 36fbfdbd3e8dc7335963f763448fcca6

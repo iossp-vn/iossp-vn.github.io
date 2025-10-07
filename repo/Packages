@@ -640,7 +640,7 @@ Package: vn.iossp.legacyappstore
 Name: Legacy AppStore
 Depends: mobilesubstrate, firmware (>= 2.0), vn.iossp.iconrepo
 Architecture: iphoneos-arm
-Description: I'm just a regular everyday normal mothernigger.
+Description: a tweak from invoxiplaygames.
 Maintainer: iOSSupport <iossp@hotmail.com>
 Author: Invoxi
 Section: System
@@ -666,15 +666,15 @@ Size: 9548
 MD5sum: 56e8e308f530a3334154d75ba8c23401
 
 Author: satou@aoiblog.jp
-Maintainer: satou@aoiblog.jp
+Maintainer: iOSSupport <iossp@hotmail.com>
 Name: AppStoreFix
-Package: com.aoi.storefix
-Depends: net.nekokawa.appstorefix ,vn.iossp.legacyappstore ,com.innoying.sbutils
+Package: vn.iossp.appstorefix
+Depends: net.nekokawa.appstorefix ,vn.iossp.legacyappstore ,com.innoying.sbutils ,vn.iossp.iconrepo
 Section: System
 Version: 1.0-7
 Architecture: iphoneos-arm
-Description: Fixed an issue where iOS 6 and earlier could not connect to the App Store. (Only the host file is rewritten. A restart may be required after installation.) If you applied the patch in the previous version, you may not be able to log in with your Apple ID, so we recommend initializing it.
+Description: After installation, your device will go to the activation screen. On iOS 6.0.x, sign in to iCloud there. Special thanks to Aoiblog, InvoxiPlayGames and Nekokawa for this awesome tweak! Sincerely, iOSSupportVN!
 Icon: file:///Library/IconRepos/System.png
-Filename: ./debs/appstorefix107.deb
-Size: 1298
-MD5sum: 39ca8648b8417fd470dd967f2cf3d92b
+Filename: ./debs/vn.iossp.appstorefix.deb
+Size: 1544
+MD5sum: 7ecdc9db1b5674ff1b1a6be990bfa520

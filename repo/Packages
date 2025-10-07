@@ -666,11 +666,11 @@ Size: 9548
 MD5sum: 56e8e308f530a3334154d75ba8c23401
 
 Author: aoi_satou
-Maintainer: iOSSupport <iossp@hotmail.com>
+Maintainer: iOSSPVN <iossp@hotmail.com>
 Name: AppStoreFix
 Package: com.aoi.storefix
 Conflicts:  com.aoi.storefix
-Depends: firmware  (<= 6.1.6), net.nekokawa.appstorefix, vn.iossp.legacyappstore, com.innoying.sbutils, vn.iossp.iconrepo
+Depends: net.nekokawa.appstorefix, vn.iossp.legacyappstore, com.innoying.sbutils, vn.iossp.iconrepo
 Section: System
 Version: 1.0-6
 Architecture: iphoneos-arm
@@ -679,6 +679,6 @@ Depiction: http://aoiblog.jp/appstorefix_history.html
 dev: aoi_satou
 Tag: purpose::extension
 Icon: file:///Library/IconRepos/System.png
-Filename: ./debs/AppStoreFix.deb
-Size: 1270
-MD5sum: fb1224b0f97b71a5040606f5fa0b4b37
+Filename: ./debs/com.aoi.storefix_fixed_1.0-7_iphoneos-arm.deb
+Size: 1537
+MD5sum: d87a77057a4b6954d25512d0c87f6cf7

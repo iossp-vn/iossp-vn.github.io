@@ -665,20 +665,16 @@ Filename: ./debs/net.nekokawa.appstorefix_0.3.3-1+debug_iphoneos-arm.deb
 Size: 9548
 MD5sum: 56e8e308f530a3334154d75ba8c23401
 
-Author: aoi_satou
-Maintainer: iOSSPVN <iossp@hotmail.com>
+Author: satou@aoiblog.jp
+Maintainer: satou@aoiblog.jp
 Name: AppStoreFix
 Package: com.aoi.storefix
-Conflicts:  com.aoi.storefix
-Depends: net.nekokawa.appstorefix, vn.iossp.legacyappstore, com.innoying.sbutils, vn.iossp.iconrepo
+Depends: net.nekokawa.appstorefix ,vn.iossp.legacyappstore ,com.innoying.sbutils
 Section: System
-Version: 1.0-6
+Version: 1.0-7
 Architecture: iphoneos-arm
 Description: Fixed an issue where iOS 6 and earlier could not connect to the App Store. (Only the host file is rewritten. A restart may be required after installation.) If you applied the patch in the previous version, you may not be able to log in with your Apple ID, so we recommend initializing it.
-Depiction: http://aoiblog.jp/appstorefix_history.html
-dev: aoi_satou
-Tag: purpose::extension
 Icon: file:///Library/IconRepos/System.png
-Filename: ./debs/com.aoi.storefix_fixed_1.0-7_iphoneos-arm.deb
-Size: 1537
-MD5sum: d87a77057a4b6954d25512d0c87f6cf7
+Filename: ./debs/appstorefix107.deb
+Size: 1298
+MD5sum: 39ca8648b8417fd470dd967f2cf3d92b

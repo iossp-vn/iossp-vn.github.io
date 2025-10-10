@@ -676,9 +676,9 @@ Version: 1.0-7
 Architecture: iphoneos-arm
 Description: After installation, your device will go to the activation screen. On iOS 6.0.x, sign in to iCloud there. Special thanks to Aoiblog, InvoxiPlayGames and Nekokawa for this awesome tweak! Sincerely, iOS Support VN!
 Icon: file:///Library/IconRepos/System.png
-Filename: ./debs/appfix.deb
-Size: 1960
-MD5sum: 1e644b854b2409624084b1a8b93f08e8
+Filename: ./debs/com.aoi.storefix_1.0-7_iphoneos-arm.deb
+Size: 1512
+MD5sum: c3182d4dc9df2c63fe4ec44c6a9949b5
 
 Package: vn.iossp.googlefix
 Name: GoogleFix

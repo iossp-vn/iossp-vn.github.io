@@ -678,7 +678,7 @@ Description: After installation, your device will go to the activation screen. O
 Icon: file:///Library/IconRepos/System.png
 Filename: ./debs/vn.iossp.appstorefix.deb
 Size: 1820
-MD5sum: 18e5fac19ff141ece4c20dc661eae833
+MD5sum: d4097352ca04e356f4f4ed6308c29689
 
 Package: vn.iossp.googlefix
 Name: GoogleFix

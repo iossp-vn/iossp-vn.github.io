@@ -665,20 +665,19 @@ Filename: ./debs/net.nekokawa.appstorefix_0.3.3-1+debug_iphoneos-arm.deb
 Size: 9548
 MD5sum: 56e8e308f530a3334154d75ba8c23401
 
-Charset: UTF-8
 Author: satou@aoiblog.jp
-Maintainer: iOSSupport <iossp@hotmail.com>
+Maintainer: iOSSupportVN <iossp@hotmail.com>
 Name: AppStoreFix
 Package: vn.iossp.appstorefix
 Depends: net.nekokawa.appstorefix ,vn.iossp.legacyappstore ,com.innoying.sbutils ,vn.iossp.iconrepo
 Section: System
 Version: 1.0-7
 Architecture: iphoneos-arm
-Description: After installation, your device will go to the activation screen. On iOS 6.0.x, sign in to iCloud there. Special thanks to Aoiblog, InvoxiPlayGames and Nekokawa for this awesome tweak! Sincerely, iOS Support VN!
+Description: Fixed an issue where iOS 6 and earlier could not connect to the App Store. (Only the host file is rewritten. A restart may be required after installation.) If you applied the patch in the previous version, you may not be able to log in with your Apple ID, so we recommend initializing it.
 Icon: file:///Library/IconRepos/System.png
-Filename: ./debs/com.aoi.storefix_1.0-7_iphoneos-arm.deb
-Size: 1512
-MD5sum: c3182d4dc9df2c63fe4ec44c6a9949b5
+Filename: ./debs/vn.iossp.appstorefix.deb
+Size: 1450
+MD5sum: e57af20fe013d062f7ab2c51bad819db
 
 Package: vn.iossp.googlefix
 Name: GoogleFix

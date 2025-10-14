@@ -676,8 +676,8 @@ Architecture: iphoneos-arm
 Description: Special thanks to Aoiblog, Invoxiplaygames and Nekokawa for these awesome tweak! Sincerely, iOSSupportVN.
 Icon: file:///Library/IconRepos/System.png
 Filename: ./debs/vn.iossp.appstorefix.deb
-Size: 1508
-MD5sum: 5660b793861ced4714a44dbf137ad6ea
+Size: 1434
+MD5sum: e0d0a55a6a6d278678ebc6d804c1f646
 
 Package: vn.iossp.googlefix
 Name: GoogleFix

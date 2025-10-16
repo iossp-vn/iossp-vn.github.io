@@ -682,7 +682,7 @@ MD5sum: 9541733290882a0a2a855862c4899fa9
 Package: vn.iossp.googlefix
 Name: GoogleFix
 Description: Fixes Google search on iOS 6
-Maintainer: iOSSupport
+Maintainer: iOSSupportVN
 Author: Victor
 Section: Tweak
 Depends: mobilesubstrate, vn.iossp.iconrepo
@@ -690,5 +690,5 @@ Architecture: iphoneos-arm
 Version: 1.0.2
 Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.googlefix.deb
-Size: 6740
-MD5sum: dd73872b8893a822174905fb5c79175c
+Size: 8530
+MD5sum: 121054eb1800bfc2a58b9a8dfc0d0300

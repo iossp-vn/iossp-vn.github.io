@@ -485,9 +485,9 @@ Maintainer: iOSSupport <iossp@hotmail.com>
 Author: OldWorldOrder <joey.t.reinhart@gmail.com>
 Section: System
 Icon: file:///Library/IconRepos/System.png
-Filename: ./debs/vn.iossp.iconfix_4.0.1_iphoneos-arm.deb
-Size: 2076
-MD5sum: cc34a137109921e669192d30b8de11c7
+Filename: ./debs/vn.iossp.iconfix.deb
+Size: 2104
+MD5sum: 23d33d5d0bacf3655de4dca39fe7d5b2
 
 Package: vn.iossp.cydown
 Name: CyDown

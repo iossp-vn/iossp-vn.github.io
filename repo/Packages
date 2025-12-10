@@ -411,9 +411,9 @@ Section: Tweak
 Description: iOS 6 LockScreen for iOS 7 - 9.
 Maintainer: iOSSupport <iossp@hotmail.com>
 Icon: file:///Library/IconRepos/Tweak.png
-Filename: ./debs/vn.iossp.classiclockscreen_3.3.1k_iphoneos-arm.deb
-Size: 736828
-MD5sum: bed4e8a5112792ec93366ed55288aa70
+Filename: ./debs/org.coolstar..classiclockscreen_3.3.1_iphoneos-arm.deb
+Size: 736186
+MD5sum: 7d5da71444883fec6d4273860d981ca3
 
 Package: vn.iossp.cacheclearer11
 Name: CacheClearer

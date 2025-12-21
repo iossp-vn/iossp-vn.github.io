@@ -401,15 +401,15 @@ Filename: ./debs/vn.iossp.tuberepair_1.2-Beta-1_iphoneos-arm.deb
 Size: 100152
 MD5sum: 447ff7ed78f6cad0164d31a7858ecd48
 
-Package: vn.iossp.classiclockscreen
+Package: com.hackyouriphone.classiclockscreen
 Name: ClassicLockScreen
 Version: 3.3.1k
-Depends: firmware (>= 7.0), mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.2), curl, org.coolstar.libclassictelephonyui, vn.iossp.iconrepo
+Depends: firmware (>= 7.0), mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.2), curl, firmware(<< 8.0) | org.coolstar.libclassictelephonyui (>= 1.1-1)
 Architecture: iphoneos-arm
 Author: CoolStar, Jeremy Goulet, Phillip Tennen <repo@hackyouriphone.org>
-Section: Tweak
-Description: iOS 6 LockScreen for iOS 7 - 9.
-Maintainer: iOSSupport <iossp@hotmail.com>
+Section: HYI - Tweaks
+Description: Hate the iOS 7 Lock Screen?
+Maintainer: iLeoLion <repo@hackyouriphone.org>
 Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/org.coolstar..classiclockscreen_3.3.1_iphoneos-arm.deb
 Size: 736186

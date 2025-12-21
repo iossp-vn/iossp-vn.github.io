@@ -692,3 +692,17 @@ Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.googlefix.deb
 Size: 8530
 MD5sum: 121054eb1800bfc2a58b9a8dfc0d0300
+
+Package: vn.gsm.classicfolders
+Version: 1.4.1k
+Section: Tweak
+Maintainer: iOSSupportVN <iossp@hotmail.com>
+Depends: firmware (>= 7.0), mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.2)
+Architecture: iphoneos-arm
+Description: Bring back iOS 6 folders to iOS 7/8/9!
+Name: ClassicFolders
+Author: CoolStar & Jeremy Goulet
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/classicfolders_1.4.1k.deb
+Size: 2345020
+MD5sum: 3372a48e79da19eac464931d9c01944b

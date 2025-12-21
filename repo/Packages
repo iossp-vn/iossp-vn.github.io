@@ -706,3 +706,17 @@ Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/classicfolders_1.4.1k.deb
 Size: 2345020
 MD5sum: 3372a48e79da19eac464931d9c01944b
+
+Package: vn.gsm.legacyswitcher
+Name: LegacySwitcher
+Depends: mobilesubstrate, firmware (>= 9.0)
+Architecture: iphoneos-arm
+Description: iOS 7/8 App Switcher for iOS9
+Maintainer: iOSSupportVN <iossp@hotmail.com>
+Author: CP Digital Darkroom
+Section: Tweak
+Version: 0.0.1-2
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/legacyswitcher_0.0.1-2.deb
+Size: 3236
+MD5sum: c71ce83c72e90acafc397d9db35d8585

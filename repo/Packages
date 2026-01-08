@@ -706,3 +706,17 @@ Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/classicfolders_1.4.1k.deb
 Size: 2345020
 MD5sum: 3372a48e79da19eac464931d9c01944b
+
+Package: vn.iossp.itunesstorex7
+Name: iTunesStoreX7
+Description: A fix for the iOS 7 AppStore! Original Tweak & Method by bag.xml & Requis!
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: Jyvee
+Section: System
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 7.0), vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Version: 0.2-9+debug
+Icon: file:///Library/IconRepos/System.png
+Filename: ./debs/vn.iossp.itunesstorex7_0.2-9+debug_iphoneos-arm.deb
+Size: 119222
+MD5sum: 00fd6c899436811dfe2ccd80325a1a20

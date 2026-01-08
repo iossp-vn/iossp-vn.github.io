@@ -467,13 +467,13 @@ Description: This tweak fixes any storefront. It fixes every app's connection is
 Maintainer: iOSSupport <iossp@hotmail.com>
 Author: Requis, Bag.xml
 Section: System
-Depends: mobilesubstrate, firmware (<=7.9), vn.iossp.iconrepo
+Depends: mobilesubstrate, firmware(<==7.9), vn.iossp.iconrepo
 Architecture: iphoneos-arm
-Version: 3.2
+Version: 2.5
 Icon: file:///Library/IconRepos/System.png
-Filename: ./debs/vn.iossp.itunesstorex_3.2_iphoneos-arm.deb
-Size: 19708
-MD5sum: 4a3c93612103a990c632ca1111f42e70
+Filename: ./debs/vn.iossp.itunesstorex_2.5_iphoneos-arm.deb
+Size: 111886
+MD5sum: 6f6d5e66c1f142311cdd3012425515d3
 
 Package: vn.iossp.iconfix
 Name: iFile/MTerminal icon fix

@@ -451,15 +451,15 @@ Name: NCSettings
 Version: 1.7.1
 Architecture: iphoneos-arm
 Author: JamieD360 <jamied360support@live.co.uk>
-Depends: firmware (>= 5.0), mobilesubstrate, com.chpwn.weeloader, preferenceloader, vn.iossp.iconrepo
+Depends: firmware (>= 5.0), mobilesubstrate, vn.iossp.weeloader, preferenceloader, vn.iossp.iconrepo
 Priority: extra
 Section: Tweak (NotificationCenter)
 Description: NCSettings is a sleek Notification Center toggle widget
 Maintainer: iOSSupport <iossp@hotmail.com>
 Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.ncsettings_1.7.1_iphoneos-arm.deb
-Size: 472584
-MD5sum: c745e3e5d06c6043f655d6c667f86ba3
+Size: 472576
+MD5sum: b2dd6d0c1f328532da965ae957a3f70e
 
 Package: vn.iossp.itunesstorex
 Name: iTunesStoreX
@@ -720,3 +720,18 @@ Icon: file:///Library/IconRepos/System.png
 Filename: ./debs/vn.iossp.itunesstorex7_0.2-9+debug_iphoneos-arm.deb
 Size: 119222
 MD5sum: 00fd6c899436811dfe2ccd80325a1a20
+
+Author: chpwn <support@chpwn.com>
+Maintainer: iOSSupport <iossp@hotmail.com>
+Name: WeeLoader
+Package: vn.iossp.weeloader
+Pre-Depends: firmware (>= 5.0)
+Depends: mobilesubstrate, vn.iossp.iconrepo
+Section: Utilities
+Version: 1.2-1
+Architecture: iphoneos-arm
+Description: Weeeeeeeeeee! Load Wee apps safely.
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/vn.iossp.weeloader_1.2-1_iphoneos-arm.deb
+Size: 3742
+MD5sum: 6373f28302c6b0e43a7b8c4b6835380e

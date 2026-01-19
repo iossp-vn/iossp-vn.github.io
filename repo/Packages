@@ -122,26 +122,19 @@ Filename: ./debs/vn.iossp.disableyoutubeupdates_0.0.1_iphoneos-arm.deb
 Size: 2198
 MD5sum: 2fd1ead5f6e83f4e63ee8ff8214724c6
 
-Name: Filza File Manager
 Package: vn.iossp.filza
-Priority: optional
-Depends: firmware (>= 7.0), zip, unzip, gzip, unrar, p7zip, vn.iossp.iconrepo
+Name: Filza File Manager
+Depends: zip, unzip, gzip, unrar, p7zip, vn.iossp.iconrepo
 Conflicts: com.tigisoftware.filza64bit
-Version: 3.6.3
 Architecture: iphoneos-arm
-Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 7 - 12.
-Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=filzafilemanagerDp
-Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=filzafilemanagerDp
-Sponsor: thebigboss.org <http://thebigboss.org>
+Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 7+
 Maintainer: iOSSupport <iossp@hotmail.com>
-Author: TIGI Software <satashi2009@gmail.com>
-Section: Application
-Tag: purpose::uikit, compatible::ios7, compatible::ios8, compatible::ios9, compatible::ios10, compatible::ios11, compatible::ios12
-dev: satashi2009
-Icon: file:///Library/IconRepos/Application.png
-Filename: ./debs/vn.iossp.filza_3.6.3_iphoneos-arm.deb
-Size: 12408394
-MD5sum: 878c381e1400c1a6c14f71a6e4e84ae9
+Author: TIGI Software
+Section: Utilities
+Version: 3.7.3-6
+Filename: ./debs/vn.iossp.filza_3.7.3-6_iphoneos-arm.deb
+Size: 12660360
+MD5sum: fa48cd46930df26f8ec7a32ea2f000bb
 
 Package: vn.iossp.noyoutubemusicads
 Name: NoYouTubeMusicAds

@@ -728,3 +728,45 @@ Icon: file:///Library/IconRepos/Utilities.png
 Filename: ./debs/vn.iossp.weeloader_1.2-1_iphoneos-arm.deb
 Size: 3742
 MD5sum: 6373f28302c6b0e43a7b8c4b6835380e
+
+Package: vn.iossp.Discord
+Name: Discord Classic
+Version: 0.8.5
+Architecture: iphoneos-arm
+Description: Discord client for iOS 5 & 6 by Trevir
+Maintainer: iOSSupport<iossp@hotmail.com>
+Author: Trevir <triveri@outlook.com>
+Section: Application
+Depends: firmware (>=5.0), vn.iossp.iconrepo
+Icon: file:///Library/IconRepos/Application.png
+Filename: ./debs/vn.iossp.Discord_0.8.5_iphoneos-arm.deb
+Size: 482654
+MD5sum: ac72f5e256953c3fe7dfc83749c61604
+
+Package: vn.iossp.legacyui
+Name: LegacyUI
+Description: An awesome MobileSubstrate tweak!
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: fem67
+Section: Tweak
+Depends: mobilesubstrate (>= 0.9.5000), vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Version: 0.0.1-1+debug
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.legacyui_0.0.1-1+debug_iphoneos-arm.deb
+Size: 5940
+MD5sum: fc8061d04060e8937bbbbff733b53424
+
+Package: vn.iossp.storeloginfix
+Name: StoreLoginFix
+Description: Fix login the AppStore for iOS 5 and older
+Maintainer: iOSSupport <iossp@hotmail.com>
+Author: nekokawa
+Section: Tweak
+Depends: mobilesubstrate (>= 0.9.5000), firmware (<= 5.1.1), vn.iossp.iconrepo
+Architecture: iphoneos-arm
+Version: 0.0.4-1+debug
+Icon: file:///Library/IconRepos/Tweak.png
+Filename: ./debs/vn.iossp.storeloginfix_0.0.4-1+debug_iphoneos-arm.deb
+Size: 12786
+MD5sum: d4ae0f1f1f73bb28f9d0a7a69ed01186

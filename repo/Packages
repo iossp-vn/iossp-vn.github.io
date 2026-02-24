@@ -308,7 +308,7 @@ SHA256: 889a92b4235d4e01cdc82e30d41cc80f1d0d0eee64634bf65288b3983fd48781
 Package: vn.iossp.netkillui11
 Name: netKillUIbeta (iOS 11)
 Version: 0.2.1-1
-Description: Kích mấy thằng xài wifi chùa của bạn.
+Description: Kick that nigga bitch off the plane.
 Author: Teggers
 Depends: adv-cmds, grep, network-cmds, shell-cmds, gawk, coreutils, firmware (>= 11.0), vn.iossp.iconrepo
 Conflicts: eu.teggers.netKillUI
@@ -317,10 +317,10 @@ Architecture: iphoneos-arm
 Maintainer: iOSSupport <iossp@hotmail.com>
 Icon: file:///Library/IconRepos/Tweak.png
 Filename: ./debs/vn.iossp.netkillui11_0.2.1-1_iphoneos-arm.deb
-Size: 813318
-MD5sum: 6fb24769781dd99fcd203f8a4a6ed7d5
-SHA1: 7050c60b53fbcf693c8fa59c74996e2de8c57fd6
-SHA256: 4cd7ec7112a1992bdcc8a2f45622b594d0a8317021d1992722095a982d218ee5
+Size: 600568
+MD5sum: 522b12df31292416992fc9fee487d7d5
+SHA1: f43710e00da11a054efac638de392b545a7bf90c
+SHA256: aecb6d8b258922e6a6d866d6a03fa1599b6024908096ff8cad0b847cdeddba2f
 
 Package: vn.iossp.fiona
 Name: Fiona

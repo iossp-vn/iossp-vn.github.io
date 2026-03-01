@@ -912,20 +912,3 @@ Size: 1100472
 MD5sum: 5f087745c85c4c6101f52fd4970a662f
 SHA1: 1b89293a03f97e6df45a25b269dd773dcaa8b653
 SHA256: 257dc4c5c54494f7efc78afdcb2968856a7b35a16b620266de43e07dc0bf1e4a
-
-
-Package: vn.gsm.videopane
-Section: !CydiaVn-Tools
-Maintainer: Cydia.vn <repo@cydia.vn>
-Depends: mobilesubstrate (>= 0.9.5001), firmware (>= 5.0), preferenceloader (>= 2.2.2), libactivator (>= 1.9.5), applist (>= 1.5.9), com.rpetrich.rocketbootstrap (>= 1.0.2) | firmware (<< 7.0), vn.iossp.iconrepo
-Architecture: iphoneos-arm
-Version: 2.0.1
-Description: Picture-in-picture for video; multitask while playing movies
-Name: VideoPane
-Author: Ryan Petrich
-Icon: file:///Library/IconRepos/Tweak.png
-Filename: ./debs/vn.gsm.videopane_2.0.1.deb
-Size: 356560
-MD5sum: 92af16d519b7d8b8521ceb6d6f86951a
-SHA1: 937617faf9b32dec7a6173f22d546029e7be3aed
-SHA256: 16d97dde5c86fcf2039cea3f32aac8c5558db7e04d1362330289b5cd7dcb78a2

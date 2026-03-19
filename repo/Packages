@@ -929,3 +929,21 @@ Size: 308900
 MD5sum: 85b559f9ccaa6a1f2967966205ad87e7
 SHA1: 8b9774b0829b9ddf3955cb952c334e66c689d315
 SHA256: d9d93037146411b390ac3ace3947d61440705d5fdc7e5f2e91b4d80fb48986a4
+
+Homepage: http://ultrasn0w.com/
+Package: ultrasn0w
+Name: ultrasn0w
+Version: 1.2.8
+Architecture: iphoneos-arm
+Description: iPhone Dev Team's iPhone 4, 3G and 3GS software unlock, now with added PwnApple.  Compatible with iPhone 4 baseband 01.59.00 and iPhone 3G/3GS basebands 04.26.08, 05.11.07, 05.12.01, 05.13.04 and 06.15.00!  Thanks to @sherif_hashim and @Oranav for contributing baseband crashes.
+Maintainer: Dev Team <blog@iphone-dev.org>
+Author: Dev Team <blog@iphone-dev.org>
+Section: Utilities
+Depends: vn.iossp.iconrepo, firmware (>= 3.0), mobilesubstrate (>= 0.9.3209-1) | mobilesubstrate (>= 0.9.3900)
+Conflicts: blacksn0w, yellowsn0w, gsc.wildcat
+Icon: file:///Library/IconRepos/Utilities.png
+Filename: ./debs/ultrasn0w_1.2.8_iphoneos-arm.deb
+Size: 15292
+MD5sum: 427504e26e31bfd03d14374b7f120d54
+SHA1: 2d74e1fa4b7e959bdf33b3039f1f0679ae8facf2
+SHA256: abdf8a1e4ffa9321b72ab19a3759d2aa429d9830d662dc4344d0e771fe2b5e73

@@ -15,22 +15,6 @@ MD5sum: 6659d112bf75bfcef4b91d2b5f679abc
 SHA1: 815535230a7905a68528755b5438508460ca402c
 SHA256: c395246b31c311fe84d6a39e068e56c3f4acc27550f836b2be1ab73da91af87d
 
-Package: vn.iossp.sslkillswitch
-Name: SSL Kill Switch
-Depends: mobilesubstrate, preferenceloader, vn.iossp.iconrepo
-Architecture: iphoneos-arm
-Description: Blackbox tool to disable SSL certificate validation - including certificate pinning - within iOS Apps.
-Maintainer: iOSSupport <iossp@hotmail.com>
-Author: Alban Diquet <alban@isecpartners.com>
-Section: Tweak
-Version: 0.6-1
-Icon: file:///Library/IconRepos/Tweak.png
-Filename: ./debs/vn.iossp.sslkillswitch_0.6-1_iphoneos-arm.deb
-Size: 6936
-MD5sum: ee4b6b253fca05b92762723b3e2e8416
-SHA1: 4d9fa072e2b9663500cbc8baeff21acba1e6d181
-SHA256: 1fbfb0440b241283abda30c34a0b312d49d71f042e35c25d5439df4cbca59a2a
-
 Package: vn.iossp.fixtube6
 Name: FixTube6
 Depends: mobilesubstrate, vn.iossp.iconrepo

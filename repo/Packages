@@ -947,3 +947,19 @@ Size: 5254
 MD5sum: d14f0901f5c578e34de2a717c7f4c109
 SHA1: 66c44a4b9c964766dff0696421620417c0f8327e
 SHA256: 9f4b152dcea66c9a888d9a13bd1a9c232bf2b03da49dc7f368e641c8acd518de
+
+Package: vn.iossp.screensaverip4s
+Name: ScreenSaver iP4s
+Version: 1.0
+Architecture: iphoneos-arm
+Description: DemoApp on iPhone 4S, Y not?
+Maintainer: iOSSupportVN <iossp@hotmail.com>
+Author: iOSSupportVN <iossp@hotmail.com>
+Section: Application
+Depends: mobilesubstrate (>= 0.9.5000), vn.iossp.iconrepo
+Icon: file:///Library/IconRepos/Application.png
+Filename: ./debs/vn.iossp.screensaverip4s_1.0_iphoneos-arm.deb
+Size: 47242972
+MD5sum: f1ab902d5a133dd86fb5365d0fb87675
+SHA1: c3b3e0b09f67c7502ca30d527f4b118d2bc15d4c
+SHA256: ce834350099e9330ba03f7c39c8c3fefc942369216cab8744dfff64775385bd3

@@ -956,10 +956,10 @@ Description: DemoApp on iPhone 4S, Y not?
 Maintainer: iOSSupportVN <iossp@hotmail.com>
 Author: iOSSupportVN <iossp@hotmail.com>
 Section: Application
-Depends: mobilesubstrate (>= 0.9.5000), vn.iossp.iconrepo
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 5.0), firmware (<< 10.0), vn.iossp.iconrepo
 Icon: file:///Library/IconRepos/Application.png
 Filename: ./debs/vn.iossp.screensaverip4s_1.0_iphoneos-arm.deb
-Size: 47242972
-MD5sum: f1ab902d5a133dd86fb5365d0fb87675
-SHA1: c3b3e0b09f67c7502ca30d527f4b118d2bc15d4c
-SHA256: ce834350099e9330ba03f7c39c8c3fefc942369216cab8744dfff64775385bd3
+Size: 47244322
+MD5sum: 03cc3c24fe81f8e9e4a350aa6465c4fe
+SHA1: 400d207fb1f893245608905973f637150e13904e
+SHA256: 8375a34436e6326071acaddd62372c3be96956729da007b0f6e3d7a47c0d7224

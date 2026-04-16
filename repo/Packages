@@ -903,16 +903,16 @@ Description: A fix for YouTube with sign-in.
 Maintainer: iOSSupprotVN <iossp@hotmail.com>
 Author: Preloading <me@preloading.dev>
 Section: Tweak
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 5.0), firmware (<< 10.0), vn.iossp.iconrepo
-Conflicts: dev.preloading.tubereplacer
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 5.0), firmware (<< 11.0), vn.iossp.iconrepo
+Conflicts: bag.xml.tuberepair
 Architecture: iphoneos-arm
-Version: 1.0.1
+Version: 1.0.3
 Icon: file:///Library/IconRepos/Tweak.png
-Filename: ./debs/vn.iossp.tubereplacer_1.0.1_iphoneos-arm.deb
-Size: 308900
-MD5sum: 85b559f9ccaa6a1f2967966205ad87e7
-SHA1: 8b9774b0829b9ddf3955cb952c334e66c689d315
-SHA256: d9d93037146411b390ac3ace3947d61440705d5fdc7e5f2e91b4d80fb48986a4
+Filename: ./debs/vn.iossp.tubereplacer_1.0.3_iphoneos-arm.deb
+Size: 320228
+MD5sum: 09422c7d9f2f18b521f592cfa3506bc9
+SHA1: 399e755cb5956c446b2987b263c7ceb012b24e65
+SHA256: e4a304350715ca6c8dcd5b42cbf9ee465d5c8def78c801b976f9335756193e8e
 
 Homepage: http://ultrasn0w.com/
 Package: ultrasn0w

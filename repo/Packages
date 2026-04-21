@@ -807,13 +807,13 @@ Author: Jyvee
 Section: System
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 7.0), vn.iossp.iconrepo
 Architecture: iphoneos-arm
-Version: 0.2-9+debug
+Version: 0.2.5-5+debug
 Icon: file:///Library/IconRepos/System.png
-Filename: ./debs/vn.iossp.itunesstorex7_0.2-9+debug_iphoneos-arm.deb
-Size: 119222
-MD5sum: 00fd6c899436811dfe2ccd80325a1a20
-SHA1: 6b34a82c0c684474cda1ae6f1a590d900be19127
-SHA256: e1b08569fb84a68869a2f48f1ea9b281a443adbe6cc8f0cfee1bddd959dc849e
+Filename: ./debs/vn.iossp.itunesstorex7_0.2.5-5+debug_iphoneos-arm.deb
+Size: 2090388
+MD5sum: 35d80a3434d596e4cf65e063d346fbc9
+SHA1: 1eceaf67c5742648d653b34dc154432ab160d063
+SHA256: a7591864901a239da7ecef40b34b8184b3f59476cf8d8d3d4d23a75ef4160cee
 
 Author: chpwn <support@chpwn.com>
 Maintainer: iOSSupport <iossp@hotmail.com>
